@@ -9,9 +9,10 @@ var fourthLetter = new Set(['a', 'c', 'd', 'e', 'g', 'h', 'i', 'l', 'n', 'o', 'r
 var fifthLetter = new Set(['d', 'e', 'g', 'h', 'k', 'l', 'n', 'r', 't', 'w', 'y']);
 var alpha = new Set(['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']);
 
-var wordList = new ["about", "after", "again", "below", "could", "every", "first", "found", "great", 
+var wordList = ["about", "after", "again", "below", "could", "every", "first", "found", "great", 
                             "house", "large", "learn", "never", "other", "place", "plant", "point", "right", "small", 
                             "sound", "spell", "still", "study", "their", "there", "these", "thing", "think", "three", 
                             "water", "where", "which", "world", "write"];
 
 var selectedWord = wordList[Math.random() * wordList.length];
+console.log(selectedWord);
