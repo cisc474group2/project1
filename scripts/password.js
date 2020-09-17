@@ -47,6 +47,7 @@ function start() {
     fifthRoller.add(selectedWord.charAt(4));
 
     var result = fillRolodex();
+    var rolodexPosition = result.forEach(x => Math.random() * rollerLength);
 }
 
 // Fills the rolodex rollers
@@ -64,6 +65,7 @@ function fillRolodex() {
 
     console.log(rolodex);
     console.log(selectedWord)
+    return rolodex;
 }
 
 // Set subtraction.
