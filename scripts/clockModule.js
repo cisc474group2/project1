@@ -8,7 +8,12 @@ let tickDown=function(){
 
 let updateClock=function(clock,pos){
     if(clock[pos]<0){
-        clock[pos]=9;
+        if(pos==2){
+            clock[pos]=5;
+        }
+        else{
+            clock[pos]=9;
+        }
         clock[pos-1]--;
         updateClock(clock,pos-1);
     }
