@@ -13,3 +13,10 @@ let updateClock=function(clock,pos){
         updateClock(clock,pos-1);
     }
 };
+
+let start=function(){
+    while(clockTicks[0]!=0 && clockTicks[1]!=0 && clockTicks[2]!=0 && clockTicks[3]!=0){
+        tickDown();
+    }
+    
+}

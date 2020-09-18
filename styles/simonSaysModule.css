@@ -4,7 +4,7 @@
 }
 
 #overlay {
-    background:url('../images/TimerComponent.svg');
+    background:url('../images/Component.svg');
     margin:3.33% 3.33%;
     width:100%;
     height:100%;
@@ -16,7 +16,7 @@
     position:relative;
 }
 
-#innerBorder {
+#innerBoarder {
     padding:3.33%;
 /*  Old Scale System
     padding: 20px; */
@@ -45,14 +45,14 @@
     float:left; */
 }
 
-/*#upperSegmentLight {
+#upperSegmentLight {
     float:right;
     height:100%;
     width:10.06%;
 
-
+/*
     height:50px;
-    width:50px; 
+    width:50px; */
 }
 
 .indicatorLight {
@@ -60,11 +60,11 @@
     width: 100%;
     border-radius: 50%;
     display: inline-block;
-
+/*
     height: 50px;
     width: 50px;
     border-radius: 50%;
-    display: inline-block; 
+    display: inline-block; */
 }
 
 .offLight {
@@ -77,4 +77,4 @@
 
 .successGreen {
     background-color: #28e64f;
-}*/
+}
