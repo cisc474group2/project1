@@ -78,3 +78,34 @@
 .successGreen {
     background-color: #28e64f;
 }
+
+
+.buttonContainer {
+    width:100%;
+}
+
+.buttonContainer div{
+    width:50%;
+    float:left;
+    padding:15px;
+    box-sizing:border-box;
+    border:white solid 1px;
+    text-align:center;
+    color:white;
+  }
+
+.TopButton{
+    background-color: green;
+}
+
+.LeftButton{
+    background-color: red;
+}
+
+.RightButton{
+    background-color: yellow;
+}
+
+.BottomButton{
+    background-color: blue;
+}
