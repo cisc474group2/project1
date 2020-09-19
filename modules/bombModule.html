@@ -1,0 +1,42 @@
+<link rel="stylesheet" href="../styles/bombModule.css" type="text/css">
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<script type='text/javascript' src="../scripts/bombMain.js"></script>
+
+<div id="bombModule">
+    <div id="background">
+        <div id="overlay">
+            <div id="innerBoarder">
+                <div id="upperSegment">
+                    <div id="light">
+                        <span id="indicatorLight" class="on indicatorLight"></span>
+                    </div>
+                    <div id="indicatorLabel">
+                        [TXT]
+                    </div>
+                </div>
+                <div id="batteries">
+                    <span id="dBattery1" class="battery dBattery"></span>
+                    <span id="dBattery2" class="battery dBattery"></span>
+                    <span id="dBattery3"class="battery dBattery"></span>
+                    <span id="aABattery1" class="battery aABattery"></span>
+                    <span id="aABattery2" class="battery aABattery"></span>
+                    <span id="aABattery3" class="battery aABattery"></span>
+                </div>
+                <div id="ports">
+                    <img id="PS2Port" src="../images/PS2.svg">
+                    <img id="RJ45Port" src="../images/RJ45.svg">
+                    <img id="SerialPort" src="../images/Serial.svg">
+                    <img id="StereoRCAPort"  src="../images/StereoRCA.svg">
+                    <img id="DVIDPort" src="../images/DVI.svg">
+                    <img id="ParallelPort" src="../images/Parallel.svg">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(function(){
+       var game=new startGame(); 
+    });
+</script>
