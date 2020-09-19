@@ -1,34 +1,24 @@
 <link rel="stylesheet" href="../styles/keypad.css" type="text/css">
-<script type='text/javascript' src="../scripts/keypad.js"></script>
-<div id="keyPadModule">
-    <div id="background">
-        <div id="overlay">
-            <div id="innerBoarder">
-                <div id="upperSegment">
-                    <div id="upperSegmentHeader">
-
+    <div id="keyPadModule">
+        <div id="background">
+            <div id="overlay">
+                <div id="innerBoarder">
+                    <div id="upperSegment">
+                        <div id="upperSegmentHeader"></div>
+                        <div id="upperSegmentLight">
+                            <span class="indicatorLight errorRed"></span>
+                        </div>
                     </div>
-                    <div id="upperSegmentLight">
-                        <span class="indicatorLight errorRed"></span>
+                    <div id="lowerSegment">
+                        <div class="buttonContainer">
+                            <button id="TopLeftButton">Top Left Button</button>
+                            <button id="TopRightButton">Top Right Button</button>
+                            <button id="BottomLeftButton">Bottom Left Button</button>
+                            <button id="BottomRightButton">Bottom Right Button</button>
+                        </div>
                     </div>
-                </div>
-                <div id="lowerSegment">
-                    <div class="buttonContainer">
-                        <div class="TopButton" id = "TopButton">
-                        </div>
-                        <div class="LeftButton">
-                          LeftButton
-                        </div>
-                        <div class="RightButton">
-                           Right Button
-                        </div>
-                        <div class="BottomButton">
-                          Bottom Button
-                        </div>
-                      </div>
-                    
                 </div>
             </div>
         </div>
     </div>
-</div>
+    <script type='text/javascript' src="../scripts/keypad.js"></script>

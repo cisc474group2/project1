@@ -20,5 +20,19 @@ var fourthSymbol = selectedColumn[fourthIndex];
 
 var symbols = [firstSymbol, secondSymbol, thirdSymbol, fourthSymbol];
 
+document.getElementById("TopLeftButton").addEventListener("click", function(){
+    document.getElementById("TopLeftButton").style.backgroundColor = "green";
+});
+
+document.getElementById("TopRightButton").addEventListener("click", function(){
+    document.getElementById("TopRightButton").style.backgroundColor = "green";
+});
+document.getElementById("BottomLeftButton").addEventListener("click", function(){
+    document.getElementById("BottomLeftButton").style.backgroundColor = "green";
+});
+
+document.getElementById("BottomRightButton").addEventListener("click", function(){
+    document.getElementById("BottomRightButton").style.backgroundColor = "green";
+});
 
 

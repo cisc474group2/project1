@@ -81,31 +81,38 @@
 
 
 .buttonContainer {
-    width:100%;
-}
-
-.buttonContainer div{
-    width:50%;
-    float:left;
-    padding:15px;
-    box-sizing:border-box;
-    border:white solid 1px;
-    text-align:center;
-    color:white;
+    padding: 7%;
+    background-color: white; 
   }
-
-.TopButton{
-    background-color: green;
-}
-
-.LeftButton{
-    background-color: red;
-}
-
-.RightButton{
-    background-color: yellow;
-}
-
-.BottomButton{
-    background-color: blue;
-}
+  
+  
+#TopLeftButton{
+      width:40%;
+      height:30%;
+      background-color:white;
+  }
+  
+  #TopRightButton{
+      width:40%;
+      height:30%;
+      float:right;
+      margin: 0% 18% 0% 0%;
+      background-color:white;
+      
+  }
+  
+  #BottomLeftButton{
+      float:left;
+      width:40%;
+      height:30%;
+      margin: 2% 0% 20% -0%;
+      background-color:white;
+  }
+  
+  #BottomRightButton{
+      width:40%;
+      height:30%;
+      float:right;
+      margin: 2% 18% 0% 0%;
+      background-color:white;
+  }
