@@ -1,4 +1,5 @@
 let clockTicks=[0,5,0,0];
+let strikes=0;
 
 let tickDown=function(){
     wait(1000);
@@ -24,4 +25,8 @@ let start=function(){
         tickDown();
     }
     
+}
+
+let addStrike=function(){
+    strikes++;
 }
