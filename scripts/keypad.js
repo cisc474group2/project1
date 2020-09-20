@@ -20,19 +20,50 @@ var fourthSymbol = selectedColumn[fourthIndex];
 
 var symbols = [firstSymbol, secondSymbol, thirdSymbol, fourthSymbol];
 
+
+
+var firstButton = document.getElementById("TopLeftButton");
+var firstImage = '<img src="../images/' + firstSymbol + '.png" />';
+firstButton.innerHTML = firstImage;
+
+var secondButton = document.getElementById("TopRightButton");
+var secondImage = '<img src="../images/' + secondSymbol + '.png" />';
+secondButton.innerHTML = secondImage;
+
+var thirdButton = document.getElementById("BottomLeftButton");
+var thirdImage = '<img src="../images/' + thirdSymbol + '.png" />';
+thirdButton.innerHTML = thirdImage;
+
+var fourthButton = document.getElementById("BottomRightButton");
+var fourthImage = '<img src="../images/' + fourthSymbol + '.png" />';
+fourthButton.innerHTML = fourthImage;
+
+var count = 0;
 document.getElementById("TopLeftButton").addEventListener("click", function(){
     document.getElementById("TopLeftButton").style.backgroundColor = "green";
+    count++;
+
 });
+
 
 document.getElementById("TopRightButton").addEventListener("click", function(){
     document.getElementById("TopRightButton").style.backgroundColor = "green";
+    this.disabled = true;
+    count++;
 });
 document.getElementById("BottomLeftButton").addEventListener("click", function(){
     document.getElementById("BottomLeftButton").style.backgroundColor = "green";
+    this.disabled = true;
+    count++;
 });
 
 document.getElementById("BottomRightButton").addEventListener("click", function(){
     document.getElementById("BottomRightButton").style.backgroundColor = "green";
+    this.disabled = true;
+    count++;
 });
 
+if(count >= 4){
+    document.getElementById("upperSegmentLight").style.backgroundColor == "green"; 
+}
 
