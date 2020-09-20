@@ -21,49 +21,91 @@ var fourthSymbol = selectedColumn[fourthIndex];
 var symbols = [firstSymbol, secondSymbol, thirdSymbol, fourthSymbol];
 
 
+var buttons = ["TopLeftButton", "TopRightButton", "BottomLeftButton", "BottomRightButton"];
 
-var firstButton = document.getElementById("TopLeftButton");
+var firstButtonIndex = Math.floor(Math.random() * 3);
+var firstButtonID = buttons[firstButtonIndex];
+buttons.splice(firstButtonIndex, 1);
+
+var secondButtonIndex = Math.floor(Math.random() * 2);
+var secondButtonID = buttons[secondButtonIndex];
+buttons.splice(secondButtonIndex, 1);
+
+var thirdButtonIndex = Math.floor(Math.random() * 1);
+var thirdButtonID = buttons[thirdButtonIndex];
+buttons.splice(thirdButtonIndex, 1);
+
+
+fourthButtonID = buttons[0];
+
+
+var firstButton = document.getElementById(firstButtonID);
 var firstImage = '<img src="../images/' + firstSymbol + '.png" />';
 firstButton.innerHTML = firstImage;
 
-var secondButton = document.getElementById("TopRightButton");
+var secondButton = document.getElementById(secondButtonID);
 var secondImage = '<img src="../images/' + secondSymbol + '.png" />';
 secondButton.innerHTML = secondImage;
 
-var thirdButton = document.getElementById("BottomLeftButton");
+var thirdButton = document.getElementById(thirdButtonID);
 var thirdImage = '<img src="../images/' + thirdSymbol + '.png" />';
 thirdButton.innerHTML = thirdImage;
 
-var fourthButton = document.getElementById("BottomRightButton");
+var fourthButton = document.getElementById(fourthButtonID);
 var fourthImage = '<img src="../images/' + fourthSymbol + '.png" />';
 fourthButton.innerHTML = fourthImage;
 
 var count = 0;
-document.getElementById("TopLeftButton").addEventListener("click", function(){
-    document.getElementById("TopLeftButton").style.backgroundColor = "green";
-    count++;
-
+firstButton.addEventListener("click", function(){
+    if(count == 0){
+        firstButton.style.backgroundColor = "green";
+        this.disabled = true;
+        count++;
+    }
 });
 
-
-document.getElementById("TopRightButton").addEventListener("click", function(){
-    document.getElementById("TopRightButton").style.backgroundColor = "green";
+secondButton.addEventListener("click", function(){
+    if(count == 1){
+        secondButton.style.backgroundColor = "green";
+        count++;
+    }
+    else{
+        secondButton.style.backgroundColor = "red";
+        firstButton.disabled = true;
+        thirdButton.disabled = true;
+        fourthButton.disabled = true;
+    }
     this.disabled = true;
-    count++;
-});
-document.getElementById("BottomLeftButton").addEventListener("click", function(){
-    document.getElementById("BottomLeftButton").style.backgroundColor = "green";
-    this.disabled = true;
-    count++;
+    
 });
 
-document.getElementById("BottomRightButton").addEventListener("click", function(){
-    document.getElementById("BottomRightButton").style.backgroundColor = "green";
+thirdButton.addEventListener("click", function(){
+    if(count == 2){
+        thirdButton.style.backgroundColor = "green";
+        count++;
+    }
+    else{
+        thirdButton.style.backgroundColor = "red";
+        firstButton.disabled = true;
+        secondButton.disabled = true;
+        fourthButton.disabled = true;
+    }
     this.disabled = true;
-    count++;
 });
 
-if(count >= 4){
-    document.getElementById("upperSegmentLight").style.backgroundColor == "green"; 
-}
+fourthButton.addEventListener("click", function(){
+    if(count == 3){
+        fourthButton.style.backgroundColor = "green";
+        count++;
+    }
+    else{
+        fourthButton.style.backgroundColor = "red";
+        firstButton.disabled = true;
+        secondButton.disabled = true;
+        thirdButton.disabled = true;
+    }
+    this.disabled = true;
+});
+
+
 
