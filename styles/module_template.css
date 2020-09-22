@@ -90,18 +90,35 @@
     height: 60%;
     display: flex;
     flex-direction: column;
+    background-color: gray;
 }
 
-.wire-module *{
+.wire{
     margin: 5%;
     height: 2.5%;
     width: 80%;
 }
 
-.wire{
+.blackWire{
     background: #000000;
 }
 
-.cut-wire{
+.redWire{
     background: #e62828;
+}
+
+.blueWire{
+    background: blue;
+}
+
+.yellowWire{
+    background: yellow;
+}
+
+.whiteWire{
+    background: #ffffff;
+}
+
+.cut-wire{
+    background: purple;
 }
