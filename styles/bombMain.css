@@ -1,11 +1,11 @@
 
-.bomb {
+/*.bomb {
     strike-count: 0;
     AA-batteries: 0;
     D-batteries: 0;
     num-modules: 6;
     num-games: 1;
-}
+}*/
 .module-grid{
   display: grid;
   grid-template-columns: auto auto auto;
