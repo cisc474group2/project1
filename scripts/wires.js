@@ -116,7 +116,9 @@ $(document).ready(function(){
         $(this).addClass('cut-wire').removeClass('redWire').removeClass('whiteWire').removeClass('blueWire').removeClass('yellowWire').removeClass('blackWire');
         if(this.classList.contains('correct')){
             document.getElementById('indicatorLight').className = "indicatorLight successGreen";
+            //move on
         }else{
+            //strikes or
             //you lost the game
         }
     });
