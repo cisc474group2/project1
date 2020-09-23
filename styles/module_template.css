@@ -16,7 +16,7 @@
     position:relative;
 }
 
-#innerBoarder {
+#innerBorder {
     padding:3.33%;
 /*  Old Scale System
     padding: 20px; */
@@ -120,5 +120,5 @@
 }
 
 .cut-wire{
-    background: purple;
+    background: gray;
 }
