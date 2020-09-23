@@ -2,7 +2,7 @@
 var allIndicatorLabels = [ 'SND', 'CLR', 'CAR', 'IND', 'FRQ', 'SIG', 'NSA', 'MSA', 'TRN', 'BOB', 'FRK'];
 var allBatteryNames = ['#dBattery1', '#dBattery2', '#dBattery3', '#aABattery1', '#aABattery2', '#aABattery3'];
 var allPortNames = ['#PS2Port', '#RJ45Port', '#SerialPort', '#StereoRCAPort',  '#DVIDPort', '#ParallelPort'];
-var allModuleNames = ['modules/moduleTemplate.html','modules/password.html','modules/buttonModule.html'];
+var allModuleNames = ['modules/moduleTemplate.html','modules/password.html','modules/buttonModule.html', 'modules/keypad.html'];
 var modulesToBeFilled = ['#module2','#module3','#module4','#module5','#module6'];
 
 //Bomb Information
