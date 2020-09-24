@@ -80,7 +80,7 @@ function fillRolodex() {
 		k ++;
 	});
 
-	console.log(rolodex);
+	//console.log(rolodex);
 	console.log(selectedWord)
 	return rolodex;
 }
@@ -121,7 +121,7 @@ function fillLetterPaths() {
 		toReturn.add(tmp);
 	})
 	toReturn = Array.from(toReturn);
-	console.log(toReturn);
+	//console.log(toReturn);
 	return toReturn;
 }
 
@@ -129,7 +129,7 @@ function fillLetterPaths() {
 // ButtonID is the button to change
 // Dir 1 or -1, 1 is forward, -1 is reverse.
 function changeDisplayedLetter(buttonID, dir) {
-	console.log(buttonID + " " + dir);
+	//console.log(buttonID + " " + dir);
 
 	var rollerArrayEntry = buttonID[buttonID.length - 1];
 	var selectedRoller = "roller" + rollerArrayEntry;
@@ -151,9 +151,28 @@ function setInitialPos() {
 	for (var k = 0; k < rollerNames.length; k ++) {
 		var name = rollerNames[k];
 		var pos = rolodexPosition[k];
-		var path = letterPaths[pos];
-		console.log(name, pos, path[pos]);
+		var path = letterPaths[k];
+		//console.log(name, pos, path[pos]);
 		document.getElementById(name).style.background = path[pos];
 		document.getElementById(name).style.backgroundSize = "cover";
 	}
+}
+
+function checkRollerStatus() {
+	var reconstructedWord = "";
+	var rol = Array.from(rolodex);
+	for (var k = 0; k < rolodexLength; k ++) {
+		reconstructedWord = reconstructedWord + Array.from(rol[k])[rolodexPosition[k]];
+	}
+
+	if (reconstructedWord == selectedWord) {
+		document.getElementById("indicatorLightObj").classList.remove('errorRed');
+		document.getElementById("indicatorLightObj").classList.add('successGreen');
+	}
+	else {
+		addStrike();
+	}
+		
+
+	return reconstructedWord == selectedWord;
 }
