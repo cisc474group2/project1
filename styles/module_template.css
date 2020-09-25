@@ -16,7 +16,7 @@
     position:relative;
 }
 
-#innerBoarder {
+#innerBorder {
     padding:3.33%;
 /*  Old Scale System
     padding: 20px; */
@@ -77,4 +77,48 @@
 
 .successGreen {
     background-color: #28e64f;
+}
+
+#lowerSegment{
+    padding: 5%;
+    margin: 0 auto;
+    vertical-align: middle;
+    border: 5px solid #000000;
+}
+
+.wire-module{
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    background-color: gray;
+}
+
+.wire{
+    margin: 5%;
+    height: 2.5%;
+    width: 80%;
+}
+
+.blackWire{
+    background: #000000;
+}
+
+.redWire{
+    background: #e62828;
+}
+
+.blueWire{
+    background: blue;
+}
+
+.yellowWire{
+    background: yellow;
+}
+
+.whiteWire{
+    background: #ffffff;
+}
+
+.cut-wire{
+    background: gray;
 }
