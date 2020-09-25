@@ -43,19 +43,20 @@ fourthButtonID = buttons[0];
 
 // place the image for each symbol on the appropriate button
 var firstButton = document.getElementById(firstButtonID);
-var firstImage = '<img src="../images/' + firstSymbol + '.png" />';
+console.log(firstButtonID);
+var firstImage = '<img src="../images/' + firstSymbol + '.png" class="buttons"/>';
 firstButton.innerHTML = firstImage;
 
 var secondButton = document.getElementById(secondButtonID);
-var secondImage = '<img src="../images/' + secondSymbol + '.png" />';
+var secondImage = '<img src="../images/' + secondSymbol + '.png" class="buttons"/>';
 secondButton.innerHTML = secondImage;
 
 var thirdButton = document.getElementById(thirdButtonID);
-var thirdImage = '<img src="../images/' + thirdSymbol + '.png" />';
+var thirdImage = '<img src="../images/' + thirdSymbol + '.png" class="buttons"/>';
 thirdButton.innerHTML = thirdImage;
 
 var fourthButton = document.getElementById(fourthButtonID);
-var fourthImage = '<img src="../images/' + fourthSymbol + '.png" />';
+var fourthImage = '<img src="../images/' + fourthSymbol + '.png" class="buttons"/>';
 fourthButton.innerHTML = fourthImage;
 
 
