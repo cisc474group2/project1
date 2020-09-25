@@ -18,6 +18,7 @@
 
 #innerBoarder {
     padding:3.33%;
+    height:96.34;
 /*  Old Scale System
     padding: 20px; */
 }
@@ -36,7 +37,7 @@
 
 #upperSegmentHeader {
     width:89.94%;
-    height: 8.333%;
+    height: 100%;
     float:left;
 
 /*
