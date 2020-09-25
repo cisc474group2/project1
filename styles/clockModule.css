@@ -20,6 +20,10 @@
     border-radius: 9%;
     border-color:black;
     border-width: 20px;
+    color: red;
+    font-size: 50px;
+    text-indent: 6%;
+    background-color: black;
 }
 
 #upperSegmentHeader {
@@ -36,6 +40,7 @@
     border-style:solid;
     border-color:black;
     border-width: 2.5px;
+    background-color: gray;
 }
 
 #innerBorder{
@@ -46,6 +51,10 @@
     border-style:solid;
     border-color:black;
     border-width: 2.5px;
+    text-align: center;
+    font-size: 100px;
+    background-color: black;
+    color: red;
 }
 
 #upperSegmentLight {

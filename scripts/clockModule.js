@@ -6,7 +6,7 @@ let tickDown=function(){
     clockTicks[3]--;
     updateClock(clockTicks,3);
     document.getElementById("innerBorder").innerHTML=clockTicks[0].toString(10)+clockTicks[1].toString(10)+":"+clockTicks[2].toString(10)+clockTicks[3].toString(10);
-    if(clock[0]==0 && clock[1]==0 && clock[2]==0 && clock[3]==0){
+    if(clockTicks[0]==0 && clockTicks[1]==0 && clockTicks[2]==0 && clockTicks[3]==0){
         //lose goes here
     }
 };
@@ -45,13 +45,13 @@ let addStrike=function(){
         document.getElementById("upperSegment").innerHTML="X X";
     }
     else{
-        document.getElementById("upperSegment").innerHTML="X X X";
+        //document.getElementById("upperSegment").innerHTML="X X X";
         //lose goes here
     }
 }
 
 start();
 
-document.addEventListener("click", function(){
+/*document.addEventListener("click", function(){
     addStrike();
-})
+})*/
