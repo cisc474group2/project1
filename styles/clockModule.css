@@ -1,9 +1,5 @@
-#background {
-    width:  400px;
-    height: 520px;
-}
 
-#overlay {
+#clockOverlay {
     /*background:url('../images/TimerComponent.svg');
     */margin:3.33% 3.33%;
     width:100%;
@@ -11,7 +7,7 @@
     position:relative;
 }
 
-#upperSegment {
+#clockUpperSegment {
     width:100px;
     height:50px;
     margin-top:4%;
@@ -26,13 +22,13 @@
     background-color: black;
 }
 
-#upperSegmentHeader {
+#clockUpperSegmentHeader {
     width:89.94%;
     height: 8.333%;
     float:left;
 }
 
-#outerBorder{
+#clockOuterBorder{
     margin-left:1%;
     margin-top:1%;
     height:350px;
@@ -43,7 +39,7 @@
     background-color: gray;
 }
 
-#innerBorder{
+#clockInnerBorder{
     margin-left:4.2%;
     margin-top:.2%;
     height:200px;
@@ -57,7 +53,7 @@
     color: red;
 }
 
-#upperSegmentLight {
+#clockUpperSegmentLight {
     float:right;
     height:100%;
     width:10.06%;
@@ -67,7 +63,7 @@
     width:50px; 
 }
 
-.indicatorLight {
+.clockIndicatorLight {
     float:right;
     height: 100%;
     width: 100%;

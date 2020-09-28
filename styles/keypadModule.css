@@ -1,7 +1,3 @@
-#background {
-    width: 600px;
-    height: 600px;
-}
 
 #overlay {
     background: url('../images/KeypadComponent.svg');
@@ -85,8 +81,8 @@
 }
 
 
-img {
-    margin: -20% -22%;
+.buttons{
+    margin: 12% 1%;
     width:90%;
 }
 
