@@ -169,20 +169,22 @@ function checkRollerStatus() {
 	}
 
 	if (reconstructedWord == selectedWord) {
-		document.getElementById("indicatorLightObj").classList.remove('lightOff');
-		document.getElementById("indicatorLightObj").classList.add('lightOn');
+		document.getElementById("passwordIndicatorLight").classList.remove('lightOff');
+		document.getElementById("passwordIndicatorLight").classList.add('lightOn');
 		triggers.forEach(x => {
 			var elem = document.getElementsByClassName(x)
 			Array.prototype.forEach.call(elem, function(y) {
-				console.log(y, ", ", y.classList.contains(x));
+				//console.log(y, ", ", y.classList.contains(x));
 				y.classList.remove(x);
-				console.log(y, ", ", y.classList.contains(x));
+				//console.log(y, ", ", y.classList.contains(x));
 			});
 		});
 		success = true;
 	}
 	else {
 		addStrike();
+		document.getElementById("passwordIndicatorLight").classList.remove('lightOff');
+		document.getElementById("passwordIndicatorLight").classList.add('red');
 	}
 		
 
