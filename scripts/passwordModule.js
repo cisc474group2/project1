@@ -49,7 +49,7 @@ var selectedWord = wordList[Math.floor(Math.random() * wordList.length)];
 
 //var res = start();
 
-function start(rn) {
+function passwordStart(rn) {
 	rollerNames = rn;
 
 
@@ -169,8 +169,8 @@ function checkRollerStatus() {
 	}
 
 	if (reconstructedWord == selectedWord) {
-		document.getElementById("indicatorLightObj").classList.remove('errorRed');
-		document.getElementById("indicatorLightObj").classList.add('successGreen');
+		document.getElementById("indicatorLightObj").classList.remove('lightOff');
+		document.getElementById("indicatorLightObj").classList.add('lightOn');
 		triggers.forEach(x => {
 			var elem = document.getElementsByClassName(x)
 			Array.prototype.forEach.call(elem, function(y) {
