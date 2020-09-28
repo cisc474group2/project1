@@ -32,7 +32,7 @@ let updateClock=function(clock,pos){
     }
 };
 
-let start=function(){ 
+let clockStart=function(){ 
     setInterval(tickDown, 1000);
 }
 
@@ -50,7 +50,7 @@ let addStrike=function(){
     }
 }
 
-start();
+clockStart();
 
 /*document.addEventListener("click", function(){
     addStrike();
