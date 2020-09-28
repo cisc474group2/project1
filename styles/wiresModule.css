@@ -46,29 +46,20 @@
     float:left; */
 }
 
-#upperSegmentLight {
+/*#upperSegmentLight {
     float:right;
     height:100%;
     width:10.06%;
+}*/
 
-/*
-    height:50px;
-    width:50px; */
-}
-
-.indicatorLight {
+/*indicatorLight {
     height: 100%;
     width: 100%;
     border-radius: 50%;
     display: inline-block;
-/*
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    display: inline-block; */
-}
+}*/
 
-.offLight {
+/*.offLight {
     background-color: #bbb;
 }
 
@@ -78,7 +69,7 @@
 
 .successGreen {
     background-color: #28e64f;
-}
+}*/
 
 #wiresLowerSegment{
     padding: 5%;
