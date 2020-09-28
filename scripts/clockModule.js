@@ -1,11 +1,11 @@
 clockTicks=[0,5,0,0];
 strikes=0;
-document.getElementById("innerBorder").innerHTML=clockTicks[0].toString(10)+clockTicks[1].toString(10)+":"+clockTicks[2].toString(10)+clockTicks[3].toString(10);
+document.getElementById("clockInnerBorder").innerHTML=clockTicks[0].toString(10)+clockTicks[1].toString(10)+":"+clockTicks[2].toString(10)+clockTicks[3].toString(10);
 
 let tickDown=function(){
     clockTicks[3]--;
     updateClock(clockTicks,3);
-    document.getElementById("innerBorder").innerHTML=clockTicks[0].toString(10)+clockTicks[1].toString(10)+":"+clockTicks[2].toString(10)+clockTicks[3].toString(10);
+    document.getElementById("clockInnerBorder").innerHTML=clockTicks[0].toString(10)+clockTicks[1].toString(10)+":"+clockTicks[2].toString(10)+clockTicks[3].toString(10);
     if(clockTicks[0]==0 && clockTicks[1]==0 && clockTicks[2]==0 && clockTicks[3]==0){
         //lose goes here
     }
@@ -39,10 +39,10 @@ let start=function(){
 let addStrike=function(){
     strikes++;
     if(strikes==1){
-        document.getElementById("upperSegment").innerHTML="X";
+        document.getElementById("clockUpperSegment").innerHTML="X";
     }
     else if(strikes==2){
-        document.getElementById("upperSegment").innerHTML="X X";
+        document.getElementById("clockUpperSegment").innerHTML="X X";
     }
     else{
         //document.getElementById("upperSegment").innerHTML="X X X";
