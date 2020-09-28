@@ -49,7 +49,7 @@ var selectedWord = wordList[Math.floor(Math.random() * wordList.length)];
 
 //var res = start();
 
-function start(rn) {
+function passwordStart(rn) {
 	rollerNames = rn;
 
 
