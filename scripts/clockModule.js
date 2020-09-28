@@ -32,17 +32,17 @@ let updateClock=function(clock,pos){
     }
 };
 
-let start=function(){ 
+let clockStart=function(){ 
     setInterval(tickDown, 1000);
 }
 
 let addStrike=function(){
     strikes++;
     if(strikes==1){
-        document.getElementById("upperSegment").innerHTML="X";
+        document.getElementById("clockUpperSegment").innerHTML="X";
     }
     else if(strikes==2){
-        document.getElementById("upperSegment").innerHTML="X X";
+        document.getElementById("clockUpperSegment").innerHTML="X X";
     }
     else{
         //document.getElementById("upperSegment").innerHTML="X X X";
@@ -50,7 +50,7 @@ let addStrike=function(){
     }
 }
 
-start();
+clockStart();
 
 /*document.addEventListener("click", function(){
     addStrike();
