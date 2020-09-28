@@ -1,21 +1,26 @@
 <link rel="stylesheet" href="../styles/buttonModule.css" type="text/css">
+<link rel="stylesheet" href="../styles/bombMain.css" type="text/css">
 
 <div id="buttonModule">
-    <div id="background">
-        <div id="buttonoverlay">
-            <div id="innerBoarder">
-                <div id="upperSegment">
-                    <div id="upperSegmentHeader">
+    <div id="moduleSize">
+        <div id="buttonOverlay">
+            <div id="genericLightUpperSegment">
+                <div id="genericRightUpperSegmentLight">
+                    <span class="genericIndicatorLight lightOn"></span>
+                </div>
+            </div>    
+                <div id="buttonModuleLowerSection">
+                    <button class="buttonModuleButton green">
+                        [TEXT]
+                    </button>
+                    <span class="buttonModuleLightStrip blue"></span>
 
-                    </div>
-                    <div id="upperSegmentLight">
-                        <span class="indicatorLight errorRed"></span>
-                    </div>
                 </div>
-                <div id="lowerSegment">
-                    BUTTON MODULE
-                </div>
-            </div>
         </div>
     </div>
 </div>
+<script type='text/javascript' src="../scripts/buttonModule.js">
+    $(function(){
+        //Function Call
+    });
+</script>

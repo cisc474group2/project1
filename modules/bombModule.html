@@ -1,35 +1,31 @@
-<link rel="stylesheet" href="../styles/bombMain.css" type="text/css">
+<link rel="stylesheet" href="../styles/bombModule.css" type="text/css">
+<script type='text/javascript' src="../scripts/bombModule.js"></script>
 
 <div id="bombModule">
-    <div id="moduleBackground">
-        <div id="indicatorSegment">
-            <div id="leftLight">
-                <span id="indicatorLight" class="on indicatorLight"></span>
+    <div id="moduleSize">
+        <div id="bombIndicatorSegment">
+            <div id="bombLeftLight">
+                <span id="bombIndicatorLight" class="lightOn genericIndicatorLight"></span>
             </div>
-            <div id="indicatorLabel">
+            <div id="bombIndicatorLabel">
                 [TXT]
             </div>
         </div>
-        <div id="batteries">
-            <span id="dBattery1" class="battery dBattery"></span>
-            <span id="dBattery2" class="battery dBattery"></span>
-            <span id="dBattery3" class="battery dBattery"></span>
-            <span id="aABattery1" class="battery aABattery"></span>
-            <span id="aABattery2" class="battery aABattery"></span>
-            <span id="aABattery3" class="battery aABattery"></span>
+        <div id="bombBatteries">
+            <span id="bombDBattery1" class="bombBattery bombDBattery"></span>
+            <span id="bombDBattery2" class="bombBattery bombDBattery"></span>
+            <span id="bombDBattery3" class="bombBattery bombDBattery"></span>
+            <span id="bombAABattery1" class="bombBattery bombAABattery"></span>
+            <span id="bombAABattery2" class="bombBattery bombAABattery"></span>
+            <span id="bombAABattery3" class="bombBattery bombAABattery"></span>
         </div>
         <div id="ports">
-            <img id="PS2Port" src="../images/PS2.svg" class='port'>
-            <img id="RJ45Port" src="../images/RJ45.svg" class='port'>
-            <img id="SerialPort" src="../images/Serial.svg" class='port'>
-            <img id="StereoRCAPort"  src="../images/StereoRCA.svg" class='port'>
-            <img id="DVIDPort" src="../images/DVI.svg" class='port'>
-            <img id="ParallelPort" src="../images/Parallel.svg" class='port'>
+            <img id="PS2Port" src="../images/PS2.svg" class='bombPort'>
+            <img id="RJ45Port" src="../images/RJ45.svg" class='bombPort'>
+            <img id="SerialPort" src="../images/Serial.svg" class='bombPort'>
+            <img id="StereoRCAPort"  src="../images/StereoRCA.svg" class='bombPort'>
+            <img id="DVIDPort" src="../images/DVI.svg" class='bombPort'>
+            <img id="ParallelPort" src="../images/Parallel.svg" class='bombPort'>
         </div>
     </div>
 </div>
-<script type="text/javascript">
-    $(function(){
-       var game=new fillBomb(); 
-    });
-</script>
