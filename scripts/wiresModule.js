@@ -3,7 +3,7 @@ $(document).ready(function(){
     var serialNumber = Math.floor((Math.random() * 999999) + 100000);
     var odd = new Boolean(serialNumber%2===1);
     var numWires = Math.floor((Math.random() * 4) + 3);
-    $('#upperSegmentHeader').html(serialNumber);
+    $('#wiresUpperSegmentHeader').html(serialNumber);
 
     let wireClasses = ['redWire', 'whiteWire', 'blueWire', 'yellowWire', 'blackWire'];
     let wireColors = [];

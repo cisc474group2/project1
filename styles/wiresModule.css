@@ -3,7 +3,7 @@
     height: 600px;
 }
 
-#overlay {
+#wiresOverlay {
     background:url('../images/Component.svg');
     margin:3.33% 3.33%;
     width:100%;
@@ -18,12 +18,11 @@
 
 #innerBorder {
     padding:3.33%;
-    height:96.34;
 /*  Old Scale System
     padding: 20px; */
 }
 
-#upperSegment {
+#wiresUpperSegment {
     padding:4.46%;
     padding-right: 6.83%;
     width:88.3%;
@@ -35,10 +34,11 @@
     width:494px; */
 }
 
-#upperSegmentHeader {
+#wiresUpperSegmentHeader {
     width:89.94%;
-    height: 100%;
-    float:left;
+    height: 8.333%;
+    float: left;
+    font-size: 10px;
 
 /*
     width:425px;
@@ -80,11 +80,11 @@
     background-color: #28e64f;
 }
 
-#lowerSegment{
+#wiresLowerSegment{
     padding: 5%;
     margin: 0 auto;
     vertical-align: middle;
-    border: 5px solid #000000;
+    border: 3px solid #000000;
 }
 
 .wire-module{
