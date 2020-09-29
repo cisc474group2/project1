@@ -3,7 +3,7 @@
     height: 600px;
 }
 
-#overlay {
+#wiresOverlay {
     background:url('../images/Component.svg');
     margin:3.33% 3.33%;
     width:100%;
@@ -18,57 +18,40 @@
 
 #innerBorder {
     padding:3.33%;
-    height:96.34;
-/*  Old Scale System
-    padding: 20px; */
-}
-
-#upperSegment {
-    padding:4.46%;
-    padding-right: 6.83%;
-    width:88.3%;
-    height: 8.33%
-
-/*  Old Scale System
-    padding:25px;
-    padding-right: 41px;
-    width:494px; */
-}
-
-#upperSegmentHeader {
-    width:89.94%;
     height: 100%;
-    float:left;
-
-/*
-    width:425px;
-    height: 50px;
-    float:left; */
 }
 
-#upperSegmentLight {
-    float:right;
-    height:100%;
-    width:10.06%;
-
-/*
-    height:50px;
-    width:50px; */
+#wiresUpperSegment {
+    padding-top: 3.5%;
+    width: 100%;
+    height: 13.5%;
+    margin-bottom: 3.5%;
 }
 
-.indicatorLight {
+#wiresUpperSegmentHeader {
+    padding-left: 5%;
+    width:75%;
+    height: 8.333%;
+    float: left;
+    font-size: 15px;
+}
+
+#wiresUpperSegmentLight {
+    margin-right: 7.25%;
+    width: 9.5%;
+    height: 100%;
+    float: right;
+    vertical-align: middle;
+}
+
+/*indicatorLight {
     height: 100%;
     width: 100%;
     border-radius: 50%;
     display: inline-block;
-/*
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    display: inline-block; */
-}
+}*/
 
-.offLight {
+/*.offLight {
     background-color: #bbb;
 }
 
@@ -78,17 +61,17 @@
 
 .successGreen {
     background-color: #28e64f;
-}
+}*/
 
-#lowerSegment{
-    padding: 5%;
+#wiresLowerSegment{
+    padding-top: 5%;
+    width: 100%;
     margin: 0 auto;
-    vertical-align: middle;
-    border: 5px solid #000000;
+    border: 3px solid #000000;
 }
 
 .wire-module{
-    height: 60%;
+    height: 80%;
     display: flex;
     flex-direction: column;
     background-color: gray;
