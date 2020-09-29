@@ -63,14 +63,14 @@
 }*/
 
 #wiresLowerSegment{
+    padding-top: 5%;
     width: 100%;
     margin: 0 auto;
     border: 3px solid #000000;
 }
 
 .wire-module{
-    padding-top: 5%;
-    height: 60%;
+    height: 80%;
     display: flex;
     flex-direction: column;
     background-color: gray;
