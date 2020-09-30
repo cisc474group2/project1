@@ -75,31 +75,44 @@ secondButton.addEventListener("click", function(){
     // only one button has been clicked (first button)
     if(count == 1){
         secondButton.style.backgroundColor = "#28e64f";
+        this.disabled = true;
         count++;
     }
     else{
-        secondButton.style.backgroundColor = "red";
-        firstButton.disabled = true;
-        thirdButton.disabled = true;
-        fourthButton.disabled = true;
+        addStrike();
+        firstButton.style.backgroundColor = "white";
+        secondButton.style.backgroundColor = "white";
+        thirdButton.style.backgroundColor = "white";
+        fourthButton.style.backgroundColor = "white";
+        firstButton.disabled = false;
+        secondButton.disabled = false;
+        thirdButton.disabled = false;
+        fourthButton.disabled = false; 
+        count = 0;   
     }
-    this.disabled = true;
-    
+
 });
 
 thirdButton.addEventListener("click", function(){
     // only first and second buttons have been clicked
     if(count == 2){
         thirdButton.style.backgroundColor = "#28e64f";
+        this.disabled = true;
         count++;
     }
     else{
-        thirdButton.style.backgroundColor = "red";
-        firstButton.disabled = true;
-        secondButton.disabled = true;
-        fourthButton.disabled = true;
+        addStrike();
+        firstButton.style.backgroundColor = "white";
+        secondButton.style.backgroundColor = "white";
+        thirdButton.style.backgroundColor = "white";
+        fourthButton.style.backgroundColor = "white";
+        firstButton.disabled = false;
+        secondButton.disabled = false;
+        thirdButton.disabled = false;
+        fourthButton.disabled = false;    
+        count = 0;
     }
-    this.disabled = true;
+    
 });
 
 fourthButton.addEventListener("click", function(){
@@ -107,14 +120,21 @@ fourthButton.addEventListener("click", function(){
     if(count == 3){
         fourthButton.style.backgroundColor =  "#28e64f";
         document.getElementById("lightShow").className = "keypadindicatorLight keypadsuccessGreen";
+        this.disabled = true;
     }
     else{
-        fourthButton.style.backgroundColor = "red";
-        firstButton.disabled = true;
-        secondButton.disabled = true;
-        thirdButton.disabled = true;
+        addStrike();
+        firstButton.style.backgroundColor = "white";
+        secondButton.style.backgroundColor = "white";
+        thirdButton.style.backgroundColor = "white";
+        fourthButton.style.backgroundColor = "white";
+        firstButton.disabled = false;
+        secondButton.disabled = false;
+        thirdButton.disabled = false;
+        fourthButton.disabled = false;
+        count = 0;    
     }
-    this.disabled = true;
+
 });
 
 
