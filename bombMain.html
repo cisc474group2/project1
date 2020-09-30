@@ -22,6 +22,12 @@
 			<li class="nav-item">
 				<a class="nav-link" href="http://localhost:8080/">Restart Game</a>
 			</li>
+			<li class="nav-item">
+				<div id="numberOfBombModulesComplete"></div>
+				<script type='text/javascript'>
+					$('#numberOfBombModulesComplete').text(successCount);
+				</script>
+			</li>
 		</ul>
 	</nav>
 	<div class="module-grid" id="modules">
@@ -65,5 +71,4 @@
 
 </body>
 <script type='text/javascript' src="scripts/bombMain.js"></script>
-
 </html>
