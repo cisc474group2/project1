@@ -7,7 +7,7 @@ var fifthLetter = ['d', 'e', 'g', 'h', 'k', 'l', 'n', 'r', 't', 'w', 'y'];
 var letterList = [firstLetter, secondLetter, thirdLetter, fourthLetter, fifthLetter];
 var alpha = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 
-var success = false;
+var passwordSuccess = false;
 var triggers = ['ub', 'lb'];
 
 var disjointFirst = subtraction(alpha, firstLetter);
@@ -49,7 +49,7 @@ var selectedWord = wordList[Math.floor(Math.random() * wordList.length)];
 
 //var res = start();
 
-function start(rn) {
+function passwordStart(rn) {
 	rollerNames = rn;
 
 
@@ -169,20 +169,22 @@ function checkRollerStatus() {
 	}
 
 	if (reconstructedWord == selectedWord) {
-		document.getElementById("indicatorLightObj").classList.remove('errorRed');
-		document.getElementById("indicatorLightObj").classList.add('successGreen');
+		document.getElementById("passwordIndicatorLight").classList.remove('lightOff');
+		document.getElementById("passwordIndicatorLight").classList.add('lightOn');
 		triggers.forEach(x => {
 			var elem = document.getElementsByClassName(x)
 			Array.prototype.forEach.call(elem, function(y) {
-				console.log(y, ", ", y.classList.contains(x));
+				//console.log(y, ", ", y.classList.contains(x));
 				y.classList.remove(x);
-				console.log(y, ", ", y.classList.contains(x));
+				//console.log(y, ", ", y.classList.contains(x));
 			});
 		});
-		success = true;
+		passwordSuccess = true;
 	}
 	else {
 		addStrike();
+		document.getElementById("passwordIndicatorLight").classList.remove('lightOff');
+		document.getElementById("passwordIndicatorLight").classList.add('red');
 	}
 		
 

@@ -43,19 +43,19 @@ fourthButtonID = buttons[0];
 
 // place the image for each symbol on the appropriate button
 var firstButton = document.getElementById(firstButtonID);
-var firstImage = '<img src="../images/' + firstSymbol + '.png" />';
+var firstImage = '<img src="../images/' + firstSymbol + '.png" class="buttons"/>';
 firstButton.innerHTML = firstImage;
 
 var secondButton = document.getElementById(secondButtonID);
-var secondImage = '<img src="../images/' + secondSymbol + '.png" />';
+var secondImage = '<img src="../images/' + secondSymbol + '.png" class="buttons"/>';
 secondButton.innerHTML = secondImage;
 
 var thirdButton = document.getElementById(thirdButtonID);
-var thirdImage = '<img src="../images/' + thirdSymbol + '.png" />';
+var thirdImage = '<img src="../images/' + thirdSymbol + '.png" class="buttons"/>';
 thirdButton.innerHTML = thirdImage;
 
 var fourthButton = document.getElementById(fourthButtonID);
-var fourthImage = '<img src="../images/' + fourthSymbol + '.png" />';
+var fourthImage = '<img src="../images/' + fourthSymbol + '.png" class="buttons"/>';
 fourthButton.innerHTML = fourthImage;
 
 
@@ -75,46 +75,67 @@ secondButton.addEventListener("click", function(){
     // only one button has been clicked (first button)
     if(count == 1){
         secondButton.style.backgroundColor = "#28e64f";
+        this.disabled = true;
         count++;
     }
     else{
-        secondButton.style.backgroundColor = "red";
-        firstButton.disabled = true;
-        thirdButton.disabled = true;
-        fourthButton.disabled = true;
+        addStrike();
+        firstButton.style.backgroundColor = "white";
+        secondButton.style.backgroundColor = "white";
+        thirdButton.style.backgroundColor = "white";
+        fourthButton.style.backgroundColor = "white";
+        firstButton.disabled = false;
+        secondButton.disabled = false;
+        thirdButton.disabled = false;
+        fourthButton.disabled = false; 
+        count = 0;   
     }
-    this.disabled = true;
-    
+
 });
 
 thirdButton.addEventListener("click", function(){
     // only first and second buttons have been clicked
     if(count == 2){
         thirdButton.style.backgroundColor = "#28e64f";
+        this.disabled = true;
         count++;
     }
     else{
-        thirdButton.style.backgroundColor = "red";
-        firstButton.disabled = true;
-        secondButton.disabled = true;
-        fourthButton.disabled = true;
+        addStrike();
+        firstButton.style.backgroundColor = "white";
+        secondButton.style.backgroundColor = "white";
+        thirdButton.style.backgroundColor = "white";
+        fourthButton.style.backgroundColor = "white";
+        firstButton.disabled = false;
+        secondButton.disabled = false;
+        thirdButton.disabled = false;
+        fourthButton.disabled = false;    
+        count = 0;
     }
-    this.disabled = true;
+    
 });
 
 fourthButton.addEventListener("click", function(){
     // first second and third buttons have all been clicked
     if(count == 3){
         fourthButton.style.backgroundColor =  "#28e64f";
-        document.getElementById("lightShow").className = "indicatorLight successGreen";
+        document.getElementById("lightShow").className = "keypadindicatorLight keypadsuccessGreen";
+        this.disabled = true;
+        addSuccess();
     }
     else{
-        fourthButton.style.backgroundColor = "red";
-        firstButton.disabled = true;
-        secondButton.disabled = true;
-        thirdButton.disabled = true;
+        addStrike();
+        firstButton.style.backgroundColor = "white";
+        secondButton.style.backgroundColor = "white";
+        thirdButton.style.backgroundColor = "white";
+        fourthButton.style.backgroundColor = "white";
+        firstButton.disabled = false;
+        secondButton.disabled = false;
+        thirdButton.disabled = false;
+        fourthButton.disabled = false;
+        count = 0;    
     }
-    this.disabled = true;
+
 });
 
 

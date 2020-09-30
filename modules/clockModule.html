@@ -1,19 +1,31 @@
 <link rel="stylesheet" href="../styles/clockModule.css" type="text/css">
 <div id="moduleSize">
-    <div id="clockBackground">
         <div id="clockOverlay">
             <div id="clockOuterBorder">
                 <div id="clockUpperSegment">
-                    
-                </div>
-                <div id="clockIndicatorLight">
-                        
+                    <script type="text/javascript">
+                        var clockTickTockAudio = new Audio('../audio/tickTock.wav');
+                        var alarmAudio = new Audio('../audio/loudAlarmBuzzer.wav');
+
+                        clockTickTockAudio.addEventListener('ended', function () {
+                            this.currentTime = 0;
+                            this.volume = .3;
+                            this.play();
+                        }, false);
+                        clockTickTockAudio.load();
+                        clockTickTockAudio.play();
+
+                        alarmAudio.addEventListener('ended', function () {
+                            this.currentTime = 0;
+                            this.play();
+                        }, false);
+                        //$('audio#clockTickTock')[0].play();
+                    </script>
                 </div>
                 <div id="clockInnerBorder">
 
                 </div>
             </div>
         </div>
-    </div>
 </div>
 <script src="../scripts/clockModule.js"></script>
