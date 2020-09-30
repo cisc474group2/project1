@@ -1,0 +1,35 @@
+#buttonOverlay {
+    background:url('../images/ButtonComponent.svg');
+    width:100%;
+    height:100%;
+    position:relative;
+}
+
+#buttonModuleLowerSection {
+    
+    height: 60%;
+    width: 100%;   
+    display: inline-block;
+    margin-top: 5%;
+    margin-left: 5%;
+    
+}
+
+.buttonModuleButton  {
+    width: 56.1%;
+    height: 95%;
+    border-radius: 50%;
+    border-color: black;
+    border-style: solid;
+    border-width: .05vh;
+
+}
+
+.buttonModuleLightStrip  {
+    height: 92%;
+    width: 14%;
+    border-color: black;
+    border-style: solid;
+    border-width: .05vh;
+
+}

@@ -1,0 +1,112 @@
+
+#keypadoverlay {
+    background: url('../images/KeypadComponent.svg');
+    width: 100%;
+    height: 100%;
+
+    /*  Old Scale System
+    margin: 20px 20px;
+    width: 600px;
+    height:600px; */
+    position: relative;
+}
+
+#keypadupperSegment {
+    padding-top: 7.2%;
+    width: 100%;
+    height: 16%;
+
+    /*  Old Scale System
+    padding:25px;
+    padding-right: 41px;
+    width:494px; */
+}
+
+
+#keypadupperSegmentLight {
+    margin-right: 9.72%;
+    width: 9%;
+    height: 100%;
+    float: right;
+    /*
+    height:50px;
+    width:50px; */
+}
+
+#keypadlowerSegment{
+    width:100%;
+}
+
+.keypadindicatorLight {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    display: inline-block;
+    /*
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: inline-block; */
+}
+
+.offLight {
+    background-color: #bbb;
+}
+
+.keypaderrorRed {
+    background-color: #e62828;
+}
+
+.keypadsuccessGreen {
+    background-color: #28e64f;
+}
+
+
+.buttonContainer {
+    padding: 7%;
+    background-color: transparent;
+}
+
+
+.buttons{
+    margin: 12% 1%;
+    width:90%;
+}
+
+
+#TopLeftButton {
+    width: 40%;
+    height: 30%;
+    background-color: white;
+}
+
+#TopRightButton {
+    width: 40%;
+    height: 30%;
+    float: right;
+    margin: 0 18% 0 0;
+    background-color: white;
+}
+
+
+#BottomLeftButton {
+    float: left;
+    width: 40%;
+    height: 30%;
+    margin: 2% 0 20% -0%;
+    background-color: white;
+
+}
+
+#lightShow{
+    height:100%;
+}
+
+#BottomRightButton {
+    width: 40%;
+    height: 30%;
+    float: right;
+    margin: 2% 18% 0 0;
+    background-color: white;
+
+}
