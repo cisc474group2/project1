@@ -121,6 +121,7 @@ fourthButton.addEventListener("click", function(){
         fourthButton.style.backgroundColor =  "#28e64f";
         document.getElementById("lightShow").className = "keypadindicatorLight keypadsuccessGreen";
         this.disabled = true;
+        addSuccess();
     }
     else{
         addStrike();
