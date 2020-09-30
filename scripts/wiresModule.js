@@ -3,7 +3,7 @@ $(document).ready(function(){
     var serialNumber = Math.floor((Math.random() * 999999) + 100000);
     var odd = new Boolean(serialNumber%2===1);
     var numWires = Math.floor((Math.random() * 4) + 3);
-    $('#upperSegmentHeader').html(serialNumber);
+    $('#wiresUpperSegmentHeader').html("Serial Number: " + serialNumber);
 
     let wireClasses = ['redWire', 'whiteWire', 'blueWire', 'yellowWire', 'blackWire'];
     let wireColors = [];
@@ -115,7 +115,7 @@ $(document).ready(function(){
     $('.wire').click(function(){
         $(this).addClass('cut-wire').removeClass('redWire').removeClass('whiteWire').removeClass('blueWire').removeClass('yellowWire').removeClass('blackWire');
         if(this.classList.contains('correct')){
-            document.getElementById('indicatorLight').className = "indicatorLight successGreen";
+            document.getElementById('indicatorLight').className = "indicatorLight lightOn";
             //move on
         }else{
             //strikes or

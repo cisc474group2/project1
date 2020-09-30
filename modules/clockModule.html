@@ -3,10 +3,27 @@
         <div id="clockOverlay">
             <div id="clockOuterBorder">
                 <div id="clockUpperSegment">
-                    
-                </div>
-                <div id="clockIndicatorLight">
-                        
+                    <audio id="clockTickTock">
+                        <source src="../audio/tickTock.wav" type="audio/mpeg">
+                    </audio>
+                    <script type="text/javascript">
+                        var clockTickTockAudio = new Audio('../audio/tickTock.wav');
+                        var alarmAudio = new Audio('../audio/loudAlarmBuzzer.wav');
+
+                        clockTickTockAudio.addEventListener('ended', function () {
+                            this.currentTime = 0;
+                            this.volume = .3;
+                            this.play();
+                        }, false);
+                        clockTickTockAudio.load();
+                        clockTickTockAudio.play();
+
+                        alarmAudio.addEventListener('ended', function () {
+                            this.currentTime = 0;
+                            this.play();
+                        }, false);
+                        //$('audio#clockTickTock')[0].play();
+                    </script>
                 </div>
                 <div id="clockInnerBorder">
 
