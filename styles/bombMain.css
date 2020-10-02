@@ -27,6 +27,11 @@
   height: 93.75%;
 }
 
+#genericModule {
+  width:100%;
+  height:100%;
+}
+
 #genericBombOverlay {
   background:url('../images/Component.svg');
   width:100%;
