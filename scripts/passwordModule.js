@@ -7,7 +7,7 @@ var fifthLetter = ['d', 'e', 'g', 'h', 'k', 'l', 'n', 'r', 't', 'w', 'y'];
 var letterList = [firstLetter, secondLetter, thirdLetter, fourthLetter, fifthLetter];
 var alpha = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 
-var success = false;
+var passwordSuccess = false;
 var triggers = ['ub', 'lb'];
 
 var disjointFirst = subtraction(alpha, firstLetter);
@@ -179,7 +179,7 @@ function checkRollerStatus() {
 				//console.log(y, ", ", y.classList.contains(x));
 			});
 		});
-		success = true;
+		passwordSuccess = true;
 	}
 	else {
 		addStrike();
