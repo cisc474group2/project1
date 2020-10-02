@@ -55,9 +55,11 @@ let addStrike=function(){
 }
 
 let alarmAudioChecker=function() {
+<<<<<<< HEAD
     //console.log(clockTicks[0], " ", clockTicks[1], " ", clockTicks[2], " ", clockTicks[3]);
+=======
+>>>>>>> 6263f7d4a4d6cee349fd5dd66997a2f16d8b8cb8
     if (clockTicks[0] == 0 & clockTicks[1] == 0 & clockTicks[2] == 4 & clockTicks[3] == 5) {
-        console.log("Start Alarm Audio");
         alarmAudio.play();
     }
 }
