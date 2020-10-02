@@ -6,30 +6,31 @@
 }
 
 #buttonModuleLowerSection {
-    
-    height: 60%;
+    height: 70.25%;
     width: 100%;   
-    display: inline-block;
-    margin-top: 5%;
-    margin-left: 5%;
-    
+    margin-top: 10%;
+    margin-left: 9%;
+
 }
 
 .buttonModuleButton  {
-    width: 56.1%;
-    height: 95%;
+    width: 57%;
+    height: 81%;
     border-radius: 50%;
     border-color: black;
     border-style: solid;
     border-width: .05vh;
-
+    display: inline-block;
+    margin-bottom: 10%;
 }
 
 .buttonModuleLightStrip  {
-    height: 92%;
-    width: 14%;
+    margin-left: 10%;
+    height: 90%;
+    width: 15%;
     border-color: black;
     border-style: solid;
     border-width: .05vh;
+    display: inline-block;
 
 }
