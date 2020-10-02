@@ -3,9 +3,10 @@
   height: 100vw;
   width: 100vw;
   position:relative;
-  background-position: 70% 27%;
+  background-position: 60% 24%;
   background-repeat: no-repeat;
-  padding: 24%;
+  padding: 23%;
+  background-size: 110%;
   /*background-size: 150%;*/
 }
 
@@ -13,7 +14,6 @@
   display: grid;
   grid-template-columns: 33.33% 33.33% 33.33%;
   grid-template-rows: 33.33% 33.33% 33.33%;
-  /* background-color: #2196F3; */
   background-color: #2196F300;
   padding: 0%;
   height: 100%;
