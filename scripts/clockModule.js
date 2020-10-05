@@ -1,14 +1,15 @@
 document.getElementById("clockInnerBorder").innerHTML=clockTicks[0].toString(10)+clockTicks[1].toString(10)+":"+clockTicks[2].toString(10)+clockTicks[3].toString(10);
 
 let tickDown=function(){
-    clockTicks[3]--;
-    updateClock(clockTicks,3);
-    document.getElementById("clockInnerBorder").innerHTML=clockTicks[0].toString(10)+clockTicks[1].toString(10)+":"+clockTicks[2].toString(10)+clockTicks[3].toString(10);
-    alarmAudioChecker();
-    if(clockTicks[0]==0 && clockTicks[1]==0 && clockTicks[2]==0 && clockTicks[3]==0){
-        alarmAudio.pause();
-        clockTickTockAudio.pause();
-        //lose goes here
+    if (stopTheClock == 0) {
+        clockTicks[3]--;
+        updateClock(clockTicks,3);
+        document.getElementById("clockInnerBorder").innerHTML=clockTicks[0].toString(10)+clockTicks[1].toString(10)+":"+clockTicks[2].toString(10)+clockTicks[3].toString(10);
+        alarmAudioChecker();
+        if(clockTicks[0]==0 && clockTicks[1]==0 && clockTicks[2]==0 && clockTicks[3]==0 && stopTheClock == 0){
+            cleanUpClock()
+            //lose goes here
+        }
     }
 };
 
@@ -39,6 +40,7 @@ let clockStart=function(){
 
 let addStrike=function(){
     strikes++;
+    errorBuzzerSound.play();
     if(strikes==1){
         document.getElementById("clockUpperSegment").innerHTML="X";
     }
@@ -48,7 +50,16 @@ let addStrike=function(){
     else{
         //document.getElementById("upperSegment").innerHTML="X X X";
         //lose goes here
+        cleanUpClock();
     }
+}
+
+let cleanUpClock = function() {
+    console.log("stop Clock");
+    alarmAudio.pause();
+    clockTickTockAudio.pause();
+    stopTheClock = 1;
+    gameLoss();
 }
 
 let alarmAudioChecker=function() {

@@ -3,9 +3,13 @@
 
 var successCount = 0;
 var numberOfBombModulesLoaded = 2;
+var stopTheClock;
 
 var clockTicks;
 var strikes;
+var toggleSound;
+var errorBuzzerSound;
+var explosionSound;
 
 
 //loads and chooses modules
@@ -24,6 +28,10 @@ var startGame=function(ct)
     //Prepares the clock
     clockTicks = ct;
     strikes=0;
+    stopTheClock = 0;
+    toggleSound = new Audio('../audio/toggleSound.wav');
+    errorBuzzerSound = new Audio('../audio/buzzer.wav');
+    explosionSound = new Audio('../audio/explosion.wav');
     /*
     modulesToBeFilled.forEach(module => {
         $(module).load(allModuleNames[Math.floor(Math.random()*allModuleNames.length)]); //randomly chooses and loads a minigame for each module
@@ -31,6 +39,13 @@ var startGame=function(ct)
     */
 }
 
+
+function gameLoss() {
+    
+    setTimeout(() => {
+        explosionSound.play();
+    }, 1000);
+}
 
 var addSuccess=function() {
     successCount += 1;

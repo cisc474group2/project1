@@ -4,7 +4,7 @@
             <div id="clockOuterBorder">
                 <div id="clockUpperSegment">
                     <script type="text/javascript">
-                        var clockTickTockAudio = new Audio('../audio/tickTock.wav');
+                        var clockTickTockAudio = new Audio('../audio/tickTockAlt.wav');
                         var alarmAudio = new Audio('../audio/loudAlarmBuzzer.wav');
 
                         clockTickTockAudio.addEventListener('ended', function () {
@@ -15,7 +15,6 @@
                         clockTickTockAudio.load();
                         clockTickTockAudio.volume = .3;
                         clockTickTockAudio.play();
-
                         alarmAudio.addEventListener('ended', function () {
                             this.currentTime = 0;
                             this.play();
