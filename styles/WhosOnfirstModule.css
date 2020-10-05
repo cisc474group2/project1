@@ -1,10 +1,11 @@
 #background {
     width:  600px;
     height: 600px;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 #overlay {
-    background:url('../images/WhosOnFirstComponent.svg');
+    /*background:url('../images/WhosOnFirstComponent.svg');*/
     margin:3.33% 3.33%;
     width:100%;
     height:100%;
@@ -23,10 +24,12 @@
 }
 
 #upperSegment {
+    margin-bottom: 10%;
     padding:4.46%;
     padding-right: 6.83%;
     width:88.3%;
-    height: 8.33%
+    height: 8.33%;
+    
 
 /*  Old Scale System
     padding:25px;
@@ -45,8 +48,19 @@
     float:left; */
 }
 
+#DisplayText{
+    display: inline-block;
+    vertical-align: top;
+    color: white;
+    font-size: 40;
+    text-align: center;
+    height: 100%;
+    width: 88%;
+    background-color: black;
+}
+
 #upperSegmentLight {
-    float:right;
+    display: inline-block;
     height:100%;
     width:10.06%;
 
@@ -55,7 +69,7 @@
     width:50px; */
 }
 
-.indicatorLight {
+.WhosOnFirstIndicatorLight {
     height: 100%;
     width: 100%;
     border-radius: 50%;
@@ -77,4 +91,60 @@
 
 .successGreen {
     background-color: #28e64f;
+}
+
+.buttonContainer {
+    display: inline-block;
+    width: 80%;
+    vertical-align: top;
+    background-color: transparent;
+}
+
+.button{
+    margin: 0 0% 0 10%;
+    width: 35%;
+    height: 12%;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30;
+    background-color: wheat;
+}
+
+.button:active {
+    box-shadow: 2% 0% #666;
+    transform: translateY(2%);
+}
+
+#ButtonRow {
+    margin: 2%;
+    
+}
+
+.ProgressLightContainer {
+    display: inline-block;
+    width: 14%;
+    height: 50%;
+    vertical-align: top;
+    background-color: black;
+    
+}
+
+#Light1{
+    margin: 5% 0 10% 5%;  
+    width: 90%;
+    height: 12%;
+    background-color: white;
+}
+
+#Light2{
+    margin: 5% 0 10% 5%;
+    width: 90%;
+    height: 12%;
+    background-color: white;
+}
+
+#Light3{
+    margin: 200% 0 10% 5%;
+    width: 90%;
+    height: 12%;
+    background-color: white;
 }

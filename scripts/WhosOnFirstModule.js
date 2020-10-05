@@ -1,5 +1,6 @@
 //global variables for WhosOnfirst module
 
+//words that appear in the display, split up by which button the player reads
 var DisplayWords = {
 	"Button1": ['UR'],
 	"Button2": ['YES', 'NOTHING', 'LED', 'THEY ARE'],
@@ -8,8 +9,10 @@ var DisplayWords = {
 	"Button5": ['BLANK', 'READ', 'RED', 'YOU', 'YOUR', 'YOU\'RE', 'THEIR', ],
 	"Button6": ['DISPLAY', 'SAYS', 'NO', 'LEAD', 'HOLD ON', 'YOU ARE', 'THERE', 'SEE', 'CEE']	
 }
-
+//all possible words that appear on the buttons
 var ButtonWords = ['READY','FIRST','NO','BLANK','NOTHING','YES','WHAT','UHHH','LEFT','RIGHT','MIDDLE','OKAY','WAIT','PRESS']
+
+// words that appear on the buttons with associated list of possible words that need to be clicked
 var ClickWords = {
 	"READY": ['YES', 'OKAY', 'WHAT', 'MIDDLE', 'LEFT', 'PRESS', 'RIGHT', 'BLANK', 'READY', 'NO', 'FIRST', 'UHHH', 'NOTHING', 'WAIT'],
 	"FIRST": ['LEFT', 'OKAY', 'YES', 'MIDDLE', 'NO', 'RIGHT', 'NOTHING', 'UHHH', 'WAIT', 'READY', 'BLANK', 'WHAT', 'PRESS', 'FIRST'],
@@ -27,7 +30,26 @@ var ClickWords = {
 	"PRESS": ['RIGHT', 'MIDDLE', 'YES', 'READY', 'PRESS', 'OKAY', 'NOTHING', 'UHHH', 'BLANK', 'LEFT', 'FIRST', 'WHAT', 'NO', 'WAIT']
 }
 
+//importing buttons from html
+var Button1 = document.getElementById("Button1");
+var Button2 = document.getElementById("Button2");
+var Button3 = document.getElementById("Button3");
+var Button4 = document.getElementById("Button4");
+var Button5 = document.getElementById("Button5");
+var Button6 = document.getElementById("Button6");
+
+var IndicatorLight1 = document.getElementById("Light1");
+var IndicatorLight2 = document.getElementById("Light2");
+var IndicatorLight3 = document.getElementById("Light3");
+
+var correct = 0;
+
+
+var ButtonsArray = [Button1, Button2, Button3, Button4, Button5, Button6];
+var Display = document.getElementById("DisplayText");
+//blank game data
  GameData = {
+	 "buttons": ['','','','','',''],
 	"ButtonToPress": -1, 
 	"ButtonToRead": -1,
 	"DisplayWord": '',
@@ -36,7 +58,7 @@ var ClickWords = {
 }
 
 /* interface diagram
-_____________________
+____________________
 [ DISPLAY ]    O	|
 					|
 [btn1] [btn4]  []	|
@@ -50,47 +72,56 @@ DISPLAY:
 btn1-6: 
 	clickable buttons. One is randomly assigned WordToRead, then WordToClick is generated and assigned another. the rest are filled in randomly 
 
- WordToRead_Number  - WordToRead
- displayword		pressword
+ generate displayWord, read button based on it
+ populate buttons with random words
+ pick ReadWord based om displayWord
+ loop through ReadWord's list
+	find word that appears in list first
+	if no words appear, pick word and replace one of the other buttons 
 
-generate PressWord
 */
 
 function generateGameData(){
+	populateButtons();
+	generateButtonNumber();
+	console.log("Button to read: "+ GameData.ButtonToRead);
+	GameData.DisplayWord = generateDisplayWord(GameData.ButtonToRead); 
 	
-	GameData.WordToPress = generateWordToPress();
-	GameData.WordToRead = generateWordToRead();
 
-	if(GameData.WordToPress === GameData.WordToRead){
-		GameData.ButtonToRead = generateButtonNumber();
-		GameData.ButtonToPress = GameData.ButtonToRead;
-	}
-	else{
-		GameData.ButtonToRead = generateButtonNumber();
-		GameData.ButtonToPress = generateButtonNumber();
-		do{
-			GameData.ButtonToPress = generateButtonNumber();
-		}while(GameData.ButtonToPress == GameData.ButtonToRead)
+	for(i = 0; i < 6; i++){
+		ButtonsArray[i].innerHTML = GameData.buttons[i];
 	}
 
-	GameData.DisplayWord = generateDisplayWord(GameData.ButtonToRead);
+	Display.innerText = GameData.DisplayWord;
 
+	
+	GameData.WordToRead = GameData.buttons[GameData.ButtonToRead-1];
 
-
+	var indexOfWordToPress = 100;
+	for(k = 0; k < GameData.buttons.length; k++){
+		for(i = 0; i < ClickWords[GameData.WordToRead].length; i++){
+			if(ClickWords[GameData.WordToRead][i] === GameData.buttons[k] && i < indexOfWordToPress){
+				indexOfWordToPress = i; 
+				GameData.WordToPress = ClickWords[GameData.WordToRead][i];
+			}
+		}
+	}
 }
-
 
 function generateButtonNumber(){
-	return Math.floor(Math.random()*6)+1;
+	GameData.ButtonToRead =  Math.floor(Math.random()*6)+1;
 }
 
-function generateWordToPress(){
-	return ButtonWords[Math.floor(Math.random()*ButtonWords.length)];
+function populateButtons(){
+	var tempButtonWords = ButtonWords.slice();
+	for(k = 0; k < 6; k++){
+		var index =  Math.floor(Math.random()*tempButtonWords.length);
+		GameData.buttons[k] = tempButtonWords[index];
+		console.log(tempButtonWords[index]);
+		tempButtonWords.splice(index,1);
+		
+	}
 }
-
-function generateWordToRead(){
-	return ButtonWords[Math.floor(Math.random()*ButtonWords.length)];
-} 
 
 
 //generate display word from WordToRead_Number
@@ -118,11 +149,59 @@ function generateDisplayWord(ButtonNumber){
 	}
 }
 
-/* function test(testvar){
-	return testvar[];
-} */
+function addGreenLight(countOfCorrect){
+	switch(countOfCorrect){
+		case 1:
+			document.getElementById("Light1").style.backgroundColor = "#28e64f";
+			break;
+		case 2:
+			document.getElementById("Light2").style.backgroundColor = "#28e64f";
+			break;
+		case 3:
+			document.getElementById("Light3").style.backgroundColor = "#28e64f";
+			break;	
+	}
+}
 
-generateGameData();
-console.log(JSON.stringify(GameData));
+async function round(){
+	generateGameData();
+	$('.button').click(function(){
+		console.log($(this).text());
+		if($(this).text() === GameData.WordToPress){
+			return true;
+		}
+		else{
+			return false;
+			//addStrike();
+			//document.getElementById("WhosOnFirstIndicatorLight").classList.remove('offLight');
+			//document.getElementById("WhosOnFirstIndicatorLight").classList.add('red');
+		}
+	})
+}
 
-//generate a ButtonWord that will 
+function WhosOnfirst(){
+	while(correct < 3){
+		result = round();
+		if(result){
+			correct++;
+			addGreenLight(correct);
+		}
+		else
+
+		console.log(correct);
+	}
+}
+
+/*
+main game loop
+set up round
+see what button is clicked
+if correct, add light
+	if third round, set success light, end game
+	else set up another round
+else(wrong)
+	give strike
+	error red blinks
+	set up another round
+
+*/ 

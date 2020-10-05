@@ -1,20 +1,39 @@
-<link rel="stylesheet" href="../styles/WhosOnfirst.css" type="text/css">
-<div id="passwordModule">
+<link rel="stylesheet" href="../styles/WhosOnfirstModule.css" type="text/css">
+<div id="WhosOnfirstModule">
     <div id="background">
         <div id="overlay">
             <div id="innerBoarder">
-                <div id="upperSegment">
-                    <div id="upperSegmentHeader">
-
-                    </div>
+                <div id="upperSegment"> 
+                    <div id="DisplayText"></div>
                     <div id="upperSegmentLight">
-                        <span class="indicatorLight errorRed"></span>
+                        <span id="WhosOnFirstIndicatorLight" class="WhosOnFirstIndicatorLight offLight"></span>
                     </div>
                 </div>
                 <div id="lowerSegment">
-                    wit
+                    <div class="buttonContainer">
+                        <div id="ButtonRow">
+                            <button class="button" id="Button1">Button1</button>
+                            <button class="button" id="Button4">Button4</button>
+                        </div>
+                        <div id="ButtonRow">
+                            <button class="button" id="Button2">Button2</button>
+                            <button class="button" id="Button5">Button5</button>
+                        </div>
+                        <div id="ButtonRow">
+                            <button class="button" id="Button3">Button3</button>
+                            <button class="button" id="Button6">Button6</button>
+                        </div>
+                    </div>
+                    <div class="ProgressLightContainer">
+                        <div id="Light3"></div>
+                        <div id="Light2"></div>
+                        <div id="Light1"></div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../scripts/WhosOnFirstModule.js"></script>
 </div>
+
