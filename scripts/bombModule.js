@@ -36,7 +36,7 @@ function fillBomb() {
 
     for(i=0;i<6;i++){
         if(Math.random()<.5){
-            serialNumber[i]=Math.ceil(Math.random()*10);
+            serialNumber[i]=Math.floor(Math.random()*10);
         }
         else{
             serialNumber[i]=String.fromCharCode(Math.floor(Math.random()*26)+65);
