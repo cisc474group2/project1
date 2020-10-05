@@ -1,4 +1,3 @@
-strikes=0;
 document.getElementById("clockInnerBorder").innerHTML=clockTicks[0].toString(10)+clockTicks[1].toString(10)+":"+clockTicks[2].toString(10)+clockTicks[3].toString(10);
 
 let tickDown=function(){
@@ -54,6 +53,9 @@ let addStrike=function(){
 
 let alarmAudioChecker=function() {
     if (clockTicks[0] == 0 & clockTicks[1] == 0 & clockTicks[2] == 4 & clockTicks[3] == 5) {
+        alarmAudio.play();
+    }
+    else if (clockTicks[0] == 0 & clockTicks[1] == 0 & clockTicks[2] == 2 && clockTicks[3] == 9) {
         alarmAudio.play();
     }
 }

@@ -5,6 +5,7 @@ var successCount = 0;
 var numberOfBombModulesLoaded = 2;
 
 var clockTicks;
+var strikes;
 
 
 //loads and chooses modules
@@ -20,7 +21,9 @@ var startGame=function(ct)
     $('#module7').load('modules/keypadModule.html'); 
     $('#module8').load('modules/module_template.html'); 
 
+    //Prepares the clock
     clockTicks = ct;
+    strikes=0;
     /*
     modulesToBeFilled.forEach(module => {
         $(module).load(allModuleNames[Math.floor(Math.random()*allModuleNames.length)]); //randomly chooses and loads a minigame for each module
@@ -57,7 +60,7 @@ function decodeTime(t) {
     if (ct[2] == 1) {
         ct[2] = 3;
     }
-    console.log(ct);
+    console.log("ct", ct);
     return ct;
 }
 
@@ -67,9 +70,7 @@ $.when(
   ).done(function( urlVars ) {
     // Document is ready.
     // Value of test.json is passed as `data`.
-    console.log(urlVars);
     var time = urlVars['time'];
-    console.log(time);
     $(document).ready(function(){//Runs everything
         startGame(decodeTime(time));
     });
