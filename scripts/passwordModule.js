@@ -179,6 +179,7 @@ function checkRollerStatus() {
 				//console.log(y, ", ", y.classList.contains(x));
 			});
 		});
+		addSuccess();
 		passwordSuccess = true;
 	}
 	else {
