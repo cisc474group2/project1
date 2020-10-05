@@ -12,10 +12,10 @@ document.getElementById("startTimeLeft").addEventListener("click", function(){
     }
 
     else if(clockTicks[0] == 1){
-        clockTicks[0] == 0;
-        clockTicks[1] == 9;
-        clockTicks[2] == 3;
-        clockTicks[3] == 0;
+        clockTicks[0] = 0;
+        clockTicks[1] = 9;
+        clockTicks[2] = 3;
+        clockTicks[3] = 0;
     }
 
     else if(clockTicks[2] == 0){
