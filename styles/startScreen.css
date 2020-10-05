@@ -6,7 +6,7 @@
     vertical-align: middle;
     margin: auto;
     margin-top: 5%;
-    background-color: gray;
+    background-color: #7F8C8D;
     border-radius: 2%;
 }
 
@@ -58,10 +58,16 @@
 }
 
 #timeText, #moduleNumber{
-    border: 2px solid black;
+    margin: auto;
+    text-align: center;
     width: 100%;
     height: 15%;
     vertical-align: bottom;
+    font-size: 4.5em;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #startButtonDiv{
@@ -89,7 +95,7 @@
 #startNotes{
     display: flex;
     align-items: center;
-    border-left: 2px solid #000000;
+    border-left: 2px solid #99A3A4 ;
     color: #ffffff;
     text-align: center;
     margin: 0;
