@@ -25,7 +25,7 @@
 			<li class="nav-item">
 				<div id="numberOfBombModulesComplete"></div>
 				<script type='text/javascript'>
-					$('#numberOfBombModulesComplete').text(successCount);
+					//$('#numberOfBombModulesComplete').text(successCount);
 				</script>
 			</li>
 		</ul>
@@ -49,7 +49,9 @@
                 <button id="startButton"></button>
                     <script type="text/javascript">
                         $("#startButton").click(function () {
-                            var params = { time:$("#timeText").html.text};
+                            var clockTimeConversion = 100*clockTicks[0] + 10*clockTicks[1];
+                            if (clockTicks[2] == 3) clockTimeConversion += 1;
+                            var params = { time: clockTimeConversion};
                             var url = 'bombMain.html?' + $.param(params);
                             console.log(url);
                             window.location.href = url;

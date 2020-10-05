@@ -4,10 +4,13 @@
 var successCount = 0;
 var numberOfBombModulesLoaded = 2;
 
+var clockTicks;
+
 
 //loads and chooses modules
-var startGame=function()
+var startGame=function(ct)
 {
+
     $('#module1').load('modules/bombModule.html'); //Makes the first module a bomb
     $('#module2').load('modules/clockModule.html'); 
     $('#module3').load('modules/buttonModule.html');
@@ -17,6 +20,7 @@ var startGame=function()
     $('#module7').load('modules/keypadModule.html'); 
     $('#module8').load('modules/module_template.html'); 
 
+    clockTicks = ct;
     /*
     modulesToBeFilled.forEach(module => {
         $(module).load(allModuleNames[Math.floor(Math.random()*allModuleNames.length)]); //randomly chooses and loads a minigame for each module
@@ -45,6 +49,18 @@ function getUrlVars()
     return vars;
 }
 
+function decodeTime(t) {
+    ct = [0, 0, 0, 0];
+    ct[0] = Math.floor(t/100) % 10;
+    ct[1] = Math.floor(t/10) % 10;
+    ct[2] = Math.floor(t/1) % 10;
+    if (ct[2] == 1) {
+        ct[2] = 3;
+    }
+    console.log(ct);
+    return ct;
+}
+
 $.when(
     getUrlVars(),
     $.ready
@@ -52,9 +68,10 @@ $.when(
     // Document is ready.
     // Value of test.json is passed as `data`.
     console.log(urlVars);
-    console.log(urlVars['time']);
-    $(document).ready(function(urlVars){//Runs everything
-        startGame(urlVars['time']);
+    var time = urlVars['time'];
+    console.log(time);
+    $(document).ready(function(){//Runs everything
+        startGame(decodeTime(time));
     });
   });
 
