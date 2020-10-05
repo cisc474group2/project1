@@ -180,6 +180,7 @@ function checkRollerStatus() {
 			});
 		});
 		passwordSuccess = true;
+		addSuccess();
 	}
 	else {
 		addStrike();
