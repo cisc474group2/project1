@@ -26,7 +26,7 @@ var startGame=function()
 
 var addSuccess=function() {
     successCount += 1;
-    if (sucessCount == numberOfBombModulesLoaded) {
+    if (successCount == numberOfBombModulesLoaded) {
         console.log("game won");
     }
 }
