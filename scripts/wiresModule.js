@@ -116,6 +116,7 @@ $(document).ready(function(){
         $(this).addClass('cut-wire').removeClass('redWire').removeClass('whiteWire').removeClass('blueWire').removeClass('yellowWire').removeClass('blackWire');
         if(this.classList.contains('correct')){
             document.getElementById('indicatorLight').className = "indicatorLight lightOn";
+            addSuccess();
         }else{
             document.getElementById('indicatorLight').className = "indicatorLight red";
             addStrike();
