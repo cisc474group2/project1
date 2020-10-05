@@ -1,9 +1,9 @@
 $(document).ready(function(){
   
-    var serialNumber = Math.floor((Math.random() * 999999) + 100000);
+    //var serialNumber = Math.floor((Math.random() * 999999) + 100000);
     var odd = new Boolean(serialNumber%2===1);
     var numWires = Math.floor((Math.random() * 4) + 3);
-    $('#wiresUpperSegmentHeader').html("Serial Number: " + serialNumber);
+    //$('#wiresUpperSegmentHeader').html("Serial Number: " + serialNumber[0] + serialNumber[1] + serialNumber[2] + serialNumber[3] + serialNumber[4] + serialNumber[5]);
 
     let wireClasses = ['redWire', 'whiteWire', 'blueWire', 'yellowWire', 'blackWire'];
     let wireColors = [];
