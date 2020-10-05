@@ -24,6 +24,7 @@ var startGame=function()
     */
 }
 
+
 var addSuccess=function() {
     successCount += 1;
     if (successCount == numberOfBombModulesLoaded) {
@@ -31,6 +32,30 @@ var addSuccess=function() {
     }
 }
 
-$(document).ready(function(){//Runs everything
-    startGame();
-});
+function getUrlVars()
+{
+    var vars = [], hash;
+    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+    for(var i = 0; i < hashes.length; i++)
+    {
+        hash = hashes[i].split('=');
+        vars.push(hash[0]);
+        vars[hash[0]] = hash[1];
+    }
+    return vars;
+}
+
+$.when(
+    getUrlVars(),
+    $.ready
+  ).done(function( urlVars ) {
+    // Document is ready.
+    // Value of test.json is passed as `data`.
+    console.log(urlVars);
+    console.log(urlVars['time']);
+    $(document).ready(function(urlVars){//Runs everything
+        startGame(urlVars['time']);
+    });
+  });
+
+

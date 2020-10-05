@@ -47,7 +47,15 @@
             </div>-->
 
             <div>
-            <button id="startButton"></button>
+                <button id="startButton"></button>
+                    <script type="text/javascript">
+                        $("#startButton").click(function () {
+                            var params = { time:$("#timeText").html.text};
+                            var url = 'bombMain.html?' + $.param(params);
+                            console.log(url);
+                            window.location.href = url;
+                        });
+                    </script>
             </div>
         </div>
         <div id="startNotes">
