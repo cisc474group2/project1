@@ -1,0 +1,47 @@
+#startMenu{
+    width: 75vw;
+    height: 75vh;
+    display: flex;
+    flex-direction: row;
+    vertical-align: center;
+    margin: auto;
+    background-color: gray;
+}
+
+#setTime, #setModuleNum{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    padding: 5%;
+}
+
+#startFunctions{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+#startTimeLeft{
+    background: url('../images/startBombArrowLeft.svg');
+    height: 25%;
+    width: 25%;
+}
+
+#startTimeRight{
+    background: url('../images/startBombArrowRight.svg');
+    height: 25%;
+    width: 25%;
+}
+
+#timeText, #moduleNumber{
+    border: 3px solid black;
+    width: 50%;
+    height: 25%;
+}
+
+#startButton{
+    background: url('../images/startBombButton.svg');
+    width: 100%;
+    height: 100%;
+}
