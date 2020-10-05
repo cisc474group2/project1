@@ -172,21 +172,24 @@ async function round(){
 		}
 		else{
 			return false;
-			//addStrike();
-			//document.getElementById("WhosOnFirstIndicatorLight").classList.remove('offLight');
-			//document.getElementById("WhosOnFirstIndicatorLight").classList.add('red');
-		}
+			}
 	})
 }
 
 function WhosOnfirst(){
-	while(correct < 3){
 		result = round();
-		if(result){
+		if(correct == 3){
+			AddSuccess();
+		}
+		else if(result){
 			correct++;
 			addGreenLight(correct);
+			WhosOnfirst();
 		}
-		else
+		else{
+			addStrike();
+			WhosOnfirst();
+		}
 
 		console.log(correct);
 	}
