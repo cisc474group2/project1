@@ -2,7 +2,7 @@
 //var modulesToBeFilled = ['#module2','#module3','#module4','#module5','#module6'];
 
 var successCount = 0;
-var numberOfBombModulesLoaded = 9;
+var numberOfBombModulesLoaded = 2;
 
 
 //loads and chooses modules
@@ -26,7 +26,7 @@ var startGame=function()
 
 var addSuccess=function() {
     successCount += 1;
-    if (sucessCount == numberOfBombModulesLoaded) {
+    if (successCount == numberOfBombModulesLoaded) {
         console.log("game won");
     }
 }
