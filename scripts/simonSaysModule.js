@@ -146,37 +146,103 @@ let setAnswer=function(correct){
     document.getElementById("greenSimonTop").removeEventListener("click", goodClick);
     switch(correct){
         case 0:
-            if(strikes==0){
-                redGood();
-            }
-            else if(strikes==1){
-                greenGood();
+            if(checkSerial()){
+                if(strikes==0){
+                    redGood();
+                }
+                else if(strikes==1){
+                    greenGood();
+                }
+                else{
+                    redGood();
+                }
             }
             else{
-                redGood();
+                if(strikes==0){
+                    yellowGood();
+                }
+                else if(strikes==1){
+                    blueGood();
+                }
+                else{
+                    greenGood();
+                }
             }
             
             break;
         case 1:
-            if(strikes==0){
-                blueGood();
-            }
-            else if(strikes==1){
-                yellowGood();
+            if(checkSerial()){
+                if(strikes==0){
+                    blueGood();
+                }
+                else if(strikes==1){
+                    yellowGood();
+                }
+                else{
+                    greenGood();
+                }
             }
             else{
-                greenGood();
+                if(strikes==0){
+                    bluewGood();
+                }
+                else if(strikes==1){
+                    redGood();
+                }
+                else{
+                    yellowGood();
+                }
             }
             
             break;
         case 2:
-            
-            yellowGood();
+            if(checkSerial()){
+                if(strikes==0){
+                    greenGood();
+                }
+                else if(strikes==1){
+                    redGood();
+                }
+                else{
+                    blueGood();
+                }
+            }
+            else{
+                if(strikes==0){
+                    redGood();
+                }
+                else if(strikes==1){
+                    greenGood();
+                }
+                else{
+                    redGood();
+                }
+            }
             
             break;
         case 3:
-            
-            greenGood();
+            if(checkSerial()){
+                if(strikes==0){
+                    yellowGood();
+                }
+                else if(strikes==1){
+                    blueGood();
+                }
+                else{
+                    yellowGood();
+                }
+            }
+            else{
+                if(strikes==0){
+                    greenGood();
+                }
+                else if(strikes==1){
+                    yellowGood();
+                }
+                else{
+                    blueGood();
+                }
+            }
             
             break;
     }
@@ -214,10 +280,13 @@ let greenGood=function(){
     document.getElementById("greenSimonTop").addEventListener("click", goodClick);
 }
 
-
-/*document.addEventListener("click", function(){
-    document.getElementById("document.getElementById("blueSimonTop")").style.borderColor);
-    badClick();
-});*/
+let checkSerial=function(){
+    for(i=0;i<6;i++){
+        if(serialNumber[i]=="A" || serialNumber[i]=="E" || serialNumber[i]=="I" || serialNumber[i]=="O" || serialNumber[i]=="U"){
+            return true;
+        }
+    }
+    return false;
+}
 
 startSimon();
