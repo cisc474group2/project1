@@ -68,14 +68,14 @@
 
 #blueSimonTop{
     margin-left: 34%;
-    margin-top: 1%;
+    margin-top: -6%;
     width: 50%;
     width: 0;
     height: 0;
-    border: 4.5vw solid transparent;
+    border: 2.4vw solid transparent;
     border-bottom-color: blue;
     position: relative;
-    top: -4.5vw;
+    top: -2.4vw;
 }
 
 #blueSimonBottom{
@@ -84,11 +84,11 @@
     width: 50%;
     width: 0;
     height: 0;
-    border: 4.5vw solid transparent;
+    border: 2.4vw solid transparent;
     border-top-color: blue;
     position: relative;
-    top: 4.5vw;
-    left: -4.5vw;
+    top: 2.4vw;
+    left: -2.4vw;
 }
 
 #redSimonTop{
@@ -96,10 +96,10 @@
     margin-top: -15.7%;
     width: 0;
     height: 0;
-    border: 4.5vw solid transparent;
+    border: 2.4vw solid transparent;
     border-bottom-color: rgb(206, 7, 7);
     position: relative;
-    top: -4.5vw;
+    top: -2.4vw;
 }
 
 #redSimonBottom{
@@ -107,11 +107,11 @@
     margin-top: -15.7%;
     width: 0;
     height: 0;
-    border: 4.5vw solid transparent;
+    border: 2.4vw solid transparent;
     border-top-color: rgb(206, 7, 7);
     position: relative;
-    top: 4.5vw;
-    left: -4.5vw;
+    top: 2.4vw;
+    left: -2.4vw;
 }
 
 #yellowSimonTop{
@@ -120,10 +120,10 @@
     width: 70%;
     width: 0;
     height: 0;
-    border: 4.5vw solid transparent;
+    border: 2.4vw solid transparent;
     border-bottom-color: rgb(255, 224, 0 );
     position: relative;
-    top: -4.5vw;
+    top: -2.4vw;
 }
 
 #yellowSimonBottom{
@@ -132,11 +132,11 @@
     width: 70%;
     width: 0;
     height: 0;
-    border: 4.5vw solid transparent;
+    border: 2.4vw solid transparent;
     border-top-color: rgb(255, 224, 0 );
     position: relative;
-    top: 4.5vw;
-    left: -4.5vw
+    top: 2.4vw;
+    left: -2.4vw
 }
 
 #greenSimonTop{
@@ -145,10 +145,10 @@
     width: 50%;
     width: 0;
     height: 0;
-    border: 4.5vw solid transparent;
+    border: 2.4vw solid transparent;
     border-bottom-color: green;
     position: relative;
-    top: -4.5vw;
+    top: -2.4vw;
 }
 
 #greenSimonBottom{
@@ -157,31 +157,31 @@
     width: 50%;
     width: 0;
     height: 0;
-    border: 4.5vw solid transparent;
+    border: 2.4vw solid transparent;
     border-top-color: green;
     position: relative;
-    top: 4.5vw;
-    left: -4.5vw;
+    top: 2.4vw;
+    left: -2.4vw;
 }
 
 
 #diamond {
     width: 0;
     height: 0;
-    border: 4.5vw solid transparent;
+    border: 2.5vw solid transparent;
     border-bottom-color: red;
     position: relative;
-    top: -4.5vw;
+    top: -2.5vw;
   }
   
   #diamond:after {
     content: '';
     position: absolute;
-    left: -4.5vw;
-    top: 4.5vw;
+    left: -2.5vw;
+    top: 2.5vw;
     width: 0;
     height: 0;
-    border: 4.5vw solid transparent;
+    border: 2.5vw solid transparent;
     border-top-color: red;
   }
 
