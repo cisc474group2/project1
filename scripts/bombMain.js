@@ -99,7 +99,7 @@ var addSuccess = function () {
     successCount += 1;
     if (successCount == numModulesLoaded) {
         console.log("game won");
-        stopTheClock = 0;
+        stopTheClock = 1;
         setTimeout(() => {
             successSound.play();
         }, 500);
@@ -118,7 +118,7 @@ var addSuccess = function () {
 
 
     }
-}
+};
 
 function getUrlVars() {
     var vars = [],
@@ -130,7 +130,7 @@ function getUrlVars() {
         vars[hash[0]] = hash[1];
     }
     return vars;
-}
+};
 
 function decodeTime(t) {
     ct = [0, 0, 0, 0];
@@ -142,7 +142,7 @@ function decodeTime(t) {
     }
     console.log("ct", ct);
     return ct;
-}
+};
 
 $.when(getUrlVars(), $.ready).done(function (urlVars) {
     // Document is ready.
