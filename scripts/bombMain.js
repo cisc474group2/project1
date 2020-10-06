@@ -1,7 +1,7 @@
 // line 28- change sync strikes with hardcore on/off number of strikes
 // line 102- change '4' to user input for number of modules
 
-var allModuleNames = ['modules/buttonModule.html', 'modules/passwordModule.html', 'modules/wiresModule.html', 'modules/keypadModule.html'];
+var allModuleNames = ['modules/buttonModule.html', 'modules/passwordModule.html', 'modules/wiresModule.html', 'modules/keypadModule.html', 'modules/WhosOnFirst.html'];
 var modulesToBeFilled = [
     '#module0',
     '#module1',
