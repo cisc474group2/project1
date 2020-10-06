@@ -3,6 +3,10 @@ clockTicks=[0,5,0,0];
 strikes=0;
 document.getElementById("clockInnerBorder").innerHTML=clockTicks[0].toString(10)+clockTicks[1].toString(10)+":"+clockTicks[2].toString(10)+clockTicks[3].toString(10);
 
+let getTime=function(){
+    return clockTicks;
+}
+
 let tickDown=function(){
     clockTicks[3]--;
     updateClock(clockTicks,3);
