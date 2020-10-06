@@ -84,7 +84,7 @@ function fillRolodex() {
 	});
 
 	//console.log(rolodex);
-	console.log(selectedWord)
+	//console.log(selectedWord)
 	return rolodex;
 }
 

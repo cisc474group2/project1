@@ -15,6 +15,7 @@ var numOfAllowedStrikes;
 var toggleSound;
 var errorBuzzerSound;
 var explosionSound;
+var heartbeatSound;
 
 var blinkLightCounter;
 var blinkLightOn;
@@ -35,7 +36,9 @@ var startGame=function(ct, numModules = 2, hd)
     toggleSound = new Audio('../audio/toggleSound.wav');
     errorBuzzerSound = new Audio('../audio/buzzer.wav');
     explosionSound = new Audio('../audio/explosion.wav');
-  
+    heartbeatSound = new Audio('../audio/heartbeat.wav');
+    heartbeatSound.load();
+
     numOfAllowedStrikes = hd;
 
     blinkLightCounter = 0;
@@ -53,6 +56,11 @@ var startGame=function(ct, numModules = 2, hd)
             $(module).hide();
         }
     });
+
+
+    heartbeatSound.volume = .05;
+    heartbeatSound.play();
+    heartbeatSound.loop = ture;
 }
 
 
@@ -79,8 +87,8 @@ function gameLoss() {
 
 var addSuccess=function() {
     successCount += 1;
-    $('#numberOfBombModulesComplete').text("Modules Beaten: " + successCount + "/" + numModules);
-    if (successCount == numModules) {
+    $('#numberOfBombModulesComplete').text("Modules Beaten: " + successCount + "/" + numModulesLoaded);
+    if (successCount == numModulesLoaded) {
         console.log("game won");
     }
 }

@@ -7,7 +7,8 @@
                         <script type="text/javascript">
                             var clockTickTockAudio = new Audio('../audio/tickTockAlt.wav');
                             var alarmAudio = new Audio('../audio/loudAlarmBuzzer.wav');
-    
+                            alarmAudio.volume = .7;
+
                             clockTickTockAudio.addEventListener('ended', function () {
                                 this.currentTime = 0;
                                 this.volume = .3;
@@ -18,6 +19,7 @@
                             clockTickTockAudio.play();
                             alarmAudio.addEventListener('ended', function () {
                                 this.currentTime = 0;
+                                this.volume = .7;
                                 this.play();
                             }, false);
                             //$('audio#clockTickTock')[0].play();
