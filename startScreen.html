@@ -8,7 +8,6 @@
 	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles/startScreen.css" type="text/css">
     <link rel="stylesheet" href="styles/bombMain.css" type="text/css">
-    <script src="/scripts/startScreen.js"></script>
 </head>
 
 <body>
@@ -26,7 +25,7 @@
 			<li class="nav-item">
 				<div id="numberOfBombModulesComplete"></div>
 				<script type='text/javascript'>
-					$('#numberOfBombModulesComplete').text(successCount);
+					//$('#numberOfBombModulesComplete').text(successCount);
 				</script>
 			</li>
 		</ul>
@@ -46,14 +45,24 @@
             <button id="startModuleNumRight"></button>
             </div>-->
 
-            <div>
-            <button id="startButton"></button>
+            <div id="startButtonDiv">
+                <button id="startButton"></button>
+                    <script type="text/javascript">
+                        $("#startButton").click(function () {
+                            var clockTimeConversion = 100*clockTicks[0] + 10*clockTicks[1];
+                            if (clockTicks[2] == 3) clockTimeConversion += 1;
+                            var params = { time: clockTimeConversion};
+                            var url = 'bombMain.html?' + $.param(params);
+                            console.log(url);
+                            window.location.href = url;
+                        });
+                    </script>
             </div>
         </div>
         <div id="startNotes">
-            <h6>This screen is for your eyes only!</h6>
+            <h1>This screen is for your eyes only!</h1>
         </div>
     </div>
 </body>
-
+<script src="/scripts/startScreen.js"></script>
 </html>
