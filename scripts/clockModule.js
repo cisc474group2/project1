@@ -47,11 +47,8 @@ let clockStart=function(){
 let addStrike=function(){
     strikes++;
     errorBuzzerSound.play();
-    if(strikes==1){
-        document.getElementById("clockUpperSegment").innerHTML="X";
-    }
-    else if(strikes==2){
-        document.getElementById("clockUpperSegment").innerHTML="X X";
+    if (strikes < numOfAllowedStrikes) {
+        document.getElementById("clockUpperSegment").innerHTML += "X";
     }
     else{
         //document.getElementById("upperSegment").innerHTML="X X X";
