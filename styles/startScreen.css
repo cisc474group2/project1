@@ -1,0 +1,105 @@
+#startMenu{
+    width: 75vw;
+    height: 75vh;
+    display: flex;
+    flex-direction: row;
+    vertical-align: middle;
+    margin: auto;
+    margin-top: 5%;
+    background-color: #7F8C8D;
+    border-radius: 2%;
+}
+
+#setTime, #setModuleNum{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 2.5%;
+}
+
+#startFunctions{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+#startTimeLeft{
+    background: url('../images/startBombArrowRight.svg');
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    width: 100%;
+    height: 100%;
+    border: none;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    font-size: 0;
+    line-height: 0;
+    text-decoration: none;
+}
+
+#startTimeRight{
+    background: url('../images/startBombArrowLeft.svg');
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    width: 100%;
+    height: 100%;
+    border: none;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    font-size: 0;
+    line-height: 0;
+    text-decoration: none;
+}
+
+#timeText, #moduleNumber{
+    margin: auto;
+    text-align: center;
+    width: 100%;
+    height: 15%;
+    vertical-align: bottom;
+    font-size: 4.5em;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#startButtonDiv{
+    width: 75%;
+    height: 75%;
+    margin: auto;
+    align-items: center;
+}
+
+#startButton{
+    background: url('../images/startBombButton.svg');
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    width: 100%;
+    height: 100%;
+    border: none;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    font-size: 0;
+    line-height: 0;
+}
+
+#startNotes{
+    display: flex;
+    align-items: center;
+    border-left: 2px solid #99A3A4 ;
+    color: #ffffff;
+    text-align: center;
+    margin: 0;
+    width: 50%;
+    height: 100%;
+    padding: 5%;
+}

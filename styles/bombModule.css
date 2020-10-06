@@ -55,4 +55,8 @@
     max-width: 25%;
     height: auto;
   }
+
+  #bombSerialNumber {
+    font-family: Arial, Helvetica, sans-serif;
+  }
   
