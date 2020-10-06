@@ -57,7 +57,11 @@
                         $("#startButton").click(function () {
                             var clockTimeConversion = 100*clockTicks[0] + 10*clockTicks[1];
                             if (clockTicks[2] == 3) clockTimeConversion += 1;
-                            var params = { time: clockTimeConversion};
+                            var params = { 
+                                time: clockTimeConversion,
+                                mods: userModules,
+                                hard: userStrikes
+                            };
                             var url = 'bombMain.html?' + $.param(params);
                             console.log(url);
                             window.location.href = url;

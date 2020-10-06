@@ -12,7 +12,7 @@ let tickDown=function(){
         timingChecker();
         blinkLights();
         if(clockTicks[0]==0 && clockTicks[1]==0 && clockTicks[2]==0 && clockTicks[3]==0 && stopTheClock == 0){
-            blinkLightCounter = -1;
+            blinkLightOn = -1;
             cleanUpClock()
             //lose goes here
         }
@@ -47,11 +47,8 @@ let clockStart=function(){
 let addStrike=function(){
     strikes++;
     errorBuzzerSound.play();
-    if(strikes==1){
-        document.getElementById("clockUpperSegment").innerHTML="X";
-    }
-    else if(strikes==2){
-        document.getElementById("clockUpperSegment").innerHTML="X X";
+    if (strikes < numOfAllowedStrikes) {
+        document.getElementById("clockUpperSegment").innerHTML += "X";
     }
     else{
         //document.getElementById("upperSegment").innerHTML="X X X";
@@ -83,13 +80,13 @@ let timingChecker=function() {
 
 
 let blinkLights=function() {
-    blinkLightCounter =  (blinkLightCounter + 1) % 3;
+    blinkLightCounter =  (blinkLightCounter + 1) % 2;
     if (blinkLightCounter == 0 && blinkLightOn == 0) {
         blinkLightOn = 1;
         blobj.classList.add('warningRed');
     }
-    else if (blinkLightCounter == 0 && blinkLightsOn == 1) {
-        blinkLightsOn = 0;
+    else if (blinkLightCounter == 0 && blinkLightOn == 1) {
+        blinkLightOn = 0;
         blobj.classList.remove('warningRed');
     }
 }

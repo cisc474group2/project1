@@ -22,7 +22,7 @@ var blobj;
 
 
 //loads and chooses modules
-var startGame=function(ct, numModules = 2)
+var startGame=function(ct, numModules = 2, hd)
 {
     $('#numberOfBombModulesComplete').text("Modules Beaten: " + successCount + "/" + numModules);
     $('#bombSpace').load('modules/bombModule.html'); //Makes the first module a bomb
@@ -36,9 +36,11 @@ var startGame=function(ct, numModules = 2)
     errorBuzzerSound = new Audio('../audio/buzzer.wav');
     explosionSound = new Audio('../audio/explosion.wav');
   
-    blinkLightCounter = -1;
-    blinkLightOn = 0;
-    blobj = document.getElementById(masterBombBackground);
+    numOfAllowedStrikes = hd;
+
+    blinkLightCounter = 0;
+    blinkLightOn = -1;
+    blobj = document.getElementById("masterBombBackground");
 
 
     modulesToBeFilled.forEach(module => {
@@ -67,7 +69,7 @@ function gameLoss() {
     mbb.classList.add("bombBackgroundLoss");
     var retry = document.createElement("button");
     retry.setAttribute("id", "retryButton");
-    retry.innerHTML = "Try again...";
+    retry.innerHTML = "Click to try again...";
     mbb.appendChild(retry);
     document.getElementById("retryButton").addEventListener("click", function(){
         location.href = "startScreen.html";
@@ -115,8 +117,10 @@ $.when(
     // Document is ready.
     // Value of test.json is passed as `data`.
     var time = urlVars['time'];
+    var mods = urlVars['mods'];
+    var hard = urlVars['hard'];
     $(document).ready(function(){//Runs everything
-        startGame(decodeTime(time),4);//we only have 4 unique modules
+        startGame(decodeTime(time), mods, hard);//we only have 4 unique modules
     });
   });
 
