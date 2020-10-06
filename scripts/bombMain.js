@@ -71,7 +71,7 @@ var startGame = function (ct, numModules = 2, hd) {
 
     heartbeatSound.volume = .05;
     heartbeatSound.play();
-    heartbeatSound.loop = ture;
+    heartbeatSound.loop = true;
 }
 
 

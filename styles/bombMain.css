@@ -16,7 +16,6 @@
   /*background-size: 150%;*/
 }
 
-
 .bombBackground {
   height: 100vw;
   width: 100vw;
@@ -133,13 +132,6 @@
 }
 
 .warningRed {
-  /*color: #aa00009e;*/
+  color: #aa00009e;
   background-color: #aa00009e;
-}
-
-#numberOfBombModulesComplete{
-  float: right;
-  display: flex;
-  align-items: center;
-  color: white;
 }
