@@ -44,7 +44,7 @@
     float:left; */
 }
 
-#upperSegmentLight {
+#simonUpperSegmentLight {
     float:right;
     height:100%;
     width:10.06%;
@@ -68,7 +68,7 @@
 
 #blueSimonTop{
     margin-left: 34%;
-    margin-top: -6%;
+    margin-top: 8.6%;
     width: 50%;
     width: 0;
     height: 0;
@@ -214,7 +214,7 @@
 }
 
 .simonLightYellow {
-    border-color: rgb(250, 250, 98);
+    border-color: rgb(250, 250, 119);
 }
 
 .simonLightBlue {

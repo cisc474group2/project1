@@ -5,10 +5,10 @@ let corPos;
 let intervalID;
 
 let startSimon=function(){
-    document.getElementById("blueSimonTop").addEventListener("click", blueClick);
-    document.getElementById("redSimonTop").addEventListener("click", redClick);
-    document.getElementById("yellowSimonTop").addEventListener("click", yellowClick);
-    document.getElementById("greenSimonTop").addEventListener("click", greenClick);
+    document.getElementById("blueSimonTop").addEventListener("click", blueLight);
+    document.getElementById("redSimonTop").addEventListener("click", redLight);
+    document.getElementById("yellowSimonTop").addEventListener("click", yellowLight);
+    document.getElementById("greenSimonTop").addEventListener("click", greenLight);
     setSequence();
 }
 
@@ -25,64 +25,48 @@ let playSequence=function(){
     seqPos=1;
     corPos=0;
     setAnswer(sequence[corPos]);
-    console.log(seqPos+" "+length);
+    //console.log(seqPos+" "+length);
     intervalID=setInterval(showColor,5000);
 }
 
 let showColor=function(){
     let i=0;
-    for(i=0;i<seqPos;i++){
+    let showID=setInterval(function(){
         switch(sequence[i]){
             case 0:
-                document.getElementById("blueSimonTop").style.borderBottomColor="rgb(0, 191, 255)";
-                document.getElementById("blueSimonBottom").style.borderTopColor="rgb(0, 191, 255)";
-                setTimeout(function(){
-                    document.getElementById("blueSimonTop").style.borderBottomColor="blue";
-                    document.getElementById("blueSimonBottom").style.borderTopColor="blue";
-                },1000);
+                blueLight();
                 break;
             case 1:
-                document.getElementById("redSimonTop").style.borderBottomColor="red";
-                document.getElementById("redSimonBottom").style.borderTopColor="red";
-                setTimeout(function(){
-                    document.getElementById("redSimonTop").style.borderBottomColor="rgb(206, 7, 7)";
-                    document.getElementById("redSimonBottom").style.borderTopColor="rgb(206, 7, 7)";
-                },1000);
+                redLight();
                 break;
             case 2:
-                document.getElementById("yellowSimonTop").style.borderBottomColor="rgb(250, 250, 98)";
-                document.getElementById("yellowSimonBottom").style.borderTopColor="rgb(250, 250, 98)";
-                setTimeout(function(){
-                    document.getElementById("yellowSimonTop").style.borderBottomColor="rgb(255, 224, 0 )";
-                    document.getElementById("yellowSimonBottom").style.borderTopColor="rgb(255, 224, 0 )";
-                },1000);
+                yellowLight();
                 break;
             case 3:
-                document.getElementById("greenSimonTop").style.borderBottomColor="rgb(128, 253, 128)";
-                document.getElementById("greenSimonBottom").style.borderTopColor="rgb(128, 253, 128)";
-                setTimeout(function(){
-                    document.getElementById("greenSimonTop").style.borderBottomColor="green";
-                    document.getElementById("greenSimonBottom").style.borderTopColor="green";
-                },1000);
+                greenLight();
                 break;
         }
-    }
+        i++;
+        if(i==seqPos){
+            clearInterval(showID);
+        }
+    },1000);
 }
 
 let goodClick=function(){
     console.log("good");
-    console.log(corPos+" "+seqPos);
+    //console.log(corPos+" "+seqPos);
     corPos++;
     if(corPos==seqPos && seqPos!=length){
         seqPos++;
         corPos=0;
     }
-    else{
+    else if(corPos==seqPos && seqPos==length){
         addSuccess();
-        document.getElementById("blueSimonTop").removeEventListener("click", blueClick);
-        document.getElementById("redSimonTop").removeEventListener("click", redClick);
-        document.getElementById("yellowSimonTop").removeEventListener("click", yellowClick);
-        document.getElementById("greenSimonTop").removeEventListener("click", greenClick);
+        document.getElementById("blueSimonTop").removeEventListener("click", blueLight);
+        document.getElementById("redSimonTop").removeEventListener("click", redLight);
+        document.getElementById("yellowSimonTop").removeEventListener("click", yellowLight);
+        document.getElementById("greenSimonTop").removeEventListener("click", greenLight);
         clearInterval(intervalID);
         return;
     }
@@ -97,42 +81,6 @@ let badClick=function(){
     seqPos=1;
     corPos=0;
     setSequence();
-}
-
-let blueClick=function(){
-    document.getElementById("blueSimonTop").style.borderBottomColor="rgb(0, 191, 255)";
-    document.getElementById("blueSimonBottom").style.borderTopColor="rgb(0, 191, 255)";
-    setTimeout(function(){
-        document.getElementById("blueSimonTop").style.borderBottomColor="blue";
-        document.getElementById("blueSimonBottom").style.borderTopColor="blue";
-    },1000);
-}
-
-let redClick=function(){
-    document.getElementById("redSimonTop").style.borderBottomColor="red";
-    document.getElementById("redSimonBottom").style.borderTopColor="red";
-    setTimeout(function(){
-        document.getElementById("redSimonTop").style.borderBottomColor="rgb(206, 7, 7)";
-        document.getElementById("redSimonBottom").style.borderTopColor="rgb(206, 7, 7)";
-    },1000);
-}
-
-let yellowClick=function(){
-    document.getElementById("yellowSimonTop").style.borderBottomColor="rgb(250, 250, 98)";
-    document.getElementById("yellowSimonBottom").style.borderTopColor="rgb(250, 250, 98)";
-    setTimeout(function(){
-        document.getElementById("yellowSimonTop").style.borderBottomColor="rgb(255, 224, 0 )";
-        document.getElementById("yellowSimonBottom").style.borderTopColor="rgb(255, 224, 0 )";
-    },1000);
-}
-
-let greenClick=function(){
-    document.getElementById("greenSimonTop").style.borderBottomColor="rgb(128, 253, 128)";
-    document.getElementById("greenSimonBottom").style.borderTopColor="rgb(128, 253, 128)";
-    setTimeout(function(){
-        document.getElementById("greenSimonTop").style.borderBottomColor="green";
-        document.getElementById("greenSimonBottom").style.borderTopColor="green";
-    },1000);
 }
 
 let setAnswer=function(correct){
@@ -184,7 +132,7 @@ let setAnswer=function(correct){
             }
             else{
                 if(strikes==0){
-                    bluewGood();
+                    blueGood();
                 }
                 else if(strikes==1){
                     redGood();
@@ -278,6 +226,42 @@ let greenGood=function(){
     document.getElementById("redSimonTop").addEventListener("click", badClick);
     document.getElementById("yellowSimonTop").addEventListener("click", badClick);
     document.getElementById("greenSimonTop").addEventListener("click", goodClick);
+}
+
+let blueLight=function(){
+    document.getElementById("blueSimonTop").style.borderBottomColor="rgb(0, 191, 255)";
+    document.getElementById("blueSimonBottom").style.borderTopColor="rgb(0, 191, 255)";
+    setTimeout(function(){
+        document.getElementById("blueSimonTop").style.borderBottomColor="blue";
+        document.getElementById("blueSimonBottom").style.borderTopColor="blue";
+    },1000);
+}
+
+let redLight=function(){
+    document.getElementById("redSimonTop").style.borderBottomColor="red";
+    document.getElementById("redSimonBottom").style.borderTopColor="red";
+    setTimeout(function(){
+        document.getElementById("redSimonTop").style.borderBottomColor="rgb(206, 7, 7)";
+        document.getElementById("redSimonBottom").style.borderTopColor="rgb(206, 7, 7)";
+    },1000);
+}
+
+let yellowLight=function(){
+    document.getElementById("yellowSimonTop").style.borderBottomColor="rgb(250, 250, 119)";
+    document.getElementById("yellowSimonBottom").style.borderTopColor="rgb(250, 250, 119)";
+    setTimeout(function(){
+        document.getElementById("yellowSimonTop").style.borderBottomColor="rgb(255, 224, 0 )";
+        document.getElementById("yellowSimonBottom").style.borderTopColor="rgb(255, 224, 0 )";
+    },1000);
+}
+
+let greenLight=function(){
+    document.getElementById("greenSimonTop").style.borderBottomColor="rgb(128, 253, 128)";
+    document.getElementById("greenSimonBottom").style.borderTopColor="rgb(128, 253, 128)";
+    setTimeout(function(){
+        document.getElementById("greenSimonTop").style.borderBottomColor="green";
+        document.getElementById("greenSimonBottom").style.borderTopColor="green";
+    },1000);
 }
 
 let checkSerial=function(){
