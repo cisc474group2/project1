@@ -47,12 +47,12 @@ function gameLoss() {
     setTimeout(() => {
         explosionSound.play();
     }, 1000);
-    document.getElementById("masterBombBackground").innerHTML = "";
-    document.getElementById("masterBombBackground").style.background = "";
-    document.getElementById("masterBombBackground").style.backgroundColor = "black";
-    
 
+    var mbb = document.getElementById("masterBombBackground");
     
+    mbb.innerHTML = "";
+    mbb.classList.remove("bombBackgroundGame");
+    mbb.classList.add("bombBackgroundLoss");
 }
 
 var addSuccess=function() {
