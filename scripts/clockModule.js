@@ -12,7 +12,7 @@ let tickDown=function(){
         timingChecker();
         blinkLights();
         if(clockTicks[0]==0 && clockTicks[1]==0 && clockTicks[2]==0 && clockTicks[3]==0 && stopTheClock == 0){
-            blinkLightCounter = -1;
+            blinkLightOn = -1;
             cleanUpClock()
             //lose goes here
         }
@@ -88,8 +88,8 @@ let blinkLights=function() {
         blinkLightOn = 1;
         blobj.classList.add('warningRed');
     }
-    else if (blinkLightCounter == 0 && blinkLightsOn == 1) {
-        blinkLightsOn = 0;
+    else if (blinkLightCounter == 0 && blinkLightOn == 1) {
+        blinkLightOn = 0;
         blobj.classList.remove('warningRed');
     }
 }

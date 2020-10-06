@@ -33,9 +33,9 @@ var startGame=function(ct, numModules = 2)
     errorBuzzerSound = new Audio('../audio/buzzer.wav');
     explosionSound = new Audio('../audio/explosion.wav');
   
-    blinkLightCounter = -1;
-    blinkLightOn = 0;
-    blobj = document.getElementById(masterBombBackground);
+    blinkLightCounter = 0;
+    blinkLightOn = -1;
+    blobj = document.getElementById("masterBombBackground");
 
 
     modulesToBeFilled.forEach(module => {
