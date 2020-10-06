@@ -35,6 +35,8 @@ var startGame=function(ct, numModules = 2, hd)
     stopTheClock = 0;
     toggleSound = new Audio('../audio/toggleSound.wav');
     errorBuzzerSound = new Audio('../audio/buzzer.wav');
+    dingSound = new Audio('../audio/ding.wav');
+    successSound = new Audio('../audio/success.wav');
     explosionSound = new Audio('../audio/explosion.wav');
     heartbeatSound = new Audio('../audio/heartbeat.wav');
     heartbeatSound.load();
@@ -90,6 +92,10 @@ var addSuccess=function() {
     $('#numberOfBombModulesComplete').text("Modules Beaten: " + successCount + "/" + numModulesLoaded);
     if (successCount == numModulesLoaded) {
         console.log("game won");
+        stopTheClock = 0;
+        setTimeout(() => {
+            successSound.play();
+        }, 500);
         
     }
 }
