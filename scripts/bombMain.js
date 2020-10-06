@@ -2,7 +2,7 @@ var allModuleNames = ['modules/buttonModule.html', 'modules/passwordModule.html'
 var modulesToBeFilled = ['#module0','#module1','#module2','#module3','#module4','#module5','#module6'];
 
 var successCount = 0;
-var numModules = 2;//Chooses the number of modules (1-7)
+//var numModules = 2;//Chooses the number of modules (1-7)
 var numModulesLoaded = 0;
 var stopTheClock;
 
