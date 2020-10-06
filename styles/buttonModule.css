@@ -29,14 +29,13 @@
 
 
 .buttonModuleLightStrip  {
-    margin-left: 5%;
     height: 12%;
     width: 75%;
     border-color: black;
     border-style: solid;
     border-width: .05vh;
     padding-bottom: 15%;
-    margin-top: 8%;
+    margin-top: 2% 3%;
     display: block;
 
 }
