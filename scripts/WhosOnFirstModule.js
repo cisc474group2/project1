@@ -54,7 +54,8 @@ var Display = document.getElementById("DisplayText");
 	"ButtonToRead": -1,
 	"DisplayWord": '',
 	"WordToPress": '',
-	"WordToRead": '',	
+	"WordToRead": '',
+	"roundResult": null	
 }
 
 /* interface diagram
@@ -163,37 +164,34 @@ function addGreenLight(countOfCorrect){
 	}
 }
 
-async function round(){
-	generateGameData();
-	$('.button').click(function(){
-		console.log($(this).text());
-		if($(this).text() === GameData.WordToPress){
-			return true;
-		}
-		else{
-			return false;
-			}
-	})
-}
+$(".WordButton").click(CheckClick);
 
-function WhosOnfirst(){
-		result = round();
+function CheckClick(){
+	
+	if($(this).text() === GameData.WordToPress){
+		correct++;
+		addGreenLight(correct);
 		if(correct == 3){
-			AddSuccess();
+			document.getElementById("WhosOnFirstIndicatorLight").classList.remove('offLight');
+			document.getElementById("WhosOnFirstIndicatorLight").classList.add('successGreen');
+			return;	
 		}
-		else if(result){
-			correct++;
-			addGreenLight(correct);
-			WhosOnfirst();
-		}
-		else{
-			addStrike();
-			WhosOnfirst();
-		}
-
-		console.log(correct);
+		generateGameData();
 	}
+	else{
+		document.getElementById("WhosOnFirstIndicatorLight").classList.remove('offLight');
+		document.getElementById("WhosOnFirstIndicatorLight").classList.add('errorRed');
+		setTimeout(function(){
+			document.getElementById("WhosOnFirstIndicatorLight").classList.remove('errorRed');
+			document.getElementById("WhosOnFirstIndicatorLight").classList.add('offLight');
+			generateGameData();
+		}, 1000)
+		
+		}
 }
+
+generateGameData();
+
 
 /*
 main game loop

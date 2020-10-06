@@ -100,7 +100,7 @@
     background-color: transparent;
 }
 
-.button{
+.WordButton{
     margin: 0 0% 0 10%;
     width: 35%;
     height: 12%;
@@ -109,7 +109,7 @@
     background-color: wheat;
 }
 
-.button:active {
+.WordButton:active {
     box-shadow: 2% 0% #666;
     transform: translateY(2%);
 }
