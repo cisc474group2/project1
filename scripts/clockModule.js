@@ -42,7 +42,7 @@ let updateClock=function(clock,pos){
 
 let clockStart=function(){ 
     setInterval(tickDown, 1000);
-}
+};
 
 let addStrike=function(){
     strikes++;
@@ -55,7 +55,7 @@ let addStrike=function(){
         //lose goes here
         cleanUpClock();
     }
-}
+};
 
 let cleanUpClock = function() {
     console.log("stop Clock");
@@ -63,7 +63,7 @@ let cleanUpClock = function() {
     clockTickTockAudio.pause();
     stopTheClock = 1;
     gameLoss();
-}
+};
 
 let timingChecker=function() {
     if (clockTicks[0] == 0 & clockTicks[1] == 0 & clockTicks[2] == 4 & clockTicks[3] == 5) {
@@ -76,7 +76,7 @@ let timingChecker=function() {
     if (clockTicks[0] == 0 & clockTicks[1] == 0 & clockTicks[2] == 5 & clockTicks[3] == 9) {
         blinkLightOn = 0;
     }
-}
+};
 
 
 let blinkLights=function() {
@@ -89,7 +89,7 @@ let blinkLights=function() {
         blinkLightOn = 0;
         blobj.classList.remove('warningRed');
     }
-}
+};
 
 clockStart();
 
