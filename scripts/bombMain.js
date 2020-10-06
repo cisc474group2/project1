@@ -90,6 +90,7 @@ var addSuccess=function() {
     $('#numberOfBombModulesComplete').text("Modules Beaten: " + successCount + "/" + numModulesLoaded);
     if (successCount == numModulesLoaded) {
         console.log("game won");
+        
     }
 }
 
