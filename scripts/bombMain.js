@@ -13,6 +13,11 @@ var toggleSound;
 var errorBuzzerSound;
 var explosionSound;
 
+var blinkLightCounter;
+var blinkLightOn;
+var blobj;
+
+
 //loads and chooses modules
 var startGame=function(ct, numModules = 2)
 {
@@ -27,6 +32,11 @@ var startGame=function(ct, numModules = 2)
     toggleSound = new Audio('../audio/toggleSound.wav');
     errorBuzzerSound = new Audio('../audio/buzzer.wav');
     explosionSound = new Audio('../audio/explosion.wav');
+  
+    blinkLightCounter = -1;
+    blinkLightOn = 0;
+    blobj = document.getElementById(masterBombBackground);
+
 
     modulesToBeFilled.forEach(module => {
         if (allModuleNames.length > 0 && numModulesLoaded < numModules){
@@ -37,7 +47,6 @@ var startGame=function(ct, numModules = 2)
         } else {
             $(module).hide();
         }
-        
     });
 }
 
