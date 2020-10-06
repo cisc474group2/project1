@@ -1,11 +1,11 @@
 #startMenu{
     width: 75vw;
-    height: 75vh;
+    height: 85vh;
     display: flex;
     flex-direction: row;
     vertical-align: middle;
     margin: auto;
-    margin-top: 5%;
+    margin-top: 2.5%;
     background-color: #7F8C8D;
     border-radius: 2%;
 }
@@ -55,6 +55,10 @@
     font-size: 0;
     line-height: 0;
     text-decoration: none;
+}
+
+#startModuleNumLeft, #startModuleNumRight{
+    width: 25%;
 }
 
 #hardcoreOn{
@@ -112,4 +116,9 @@
     width: 50%;
     height: 100%;
     padding: 5%;
+}
+
+.selected{
+    background-color: #AA0000;
+    color: #ffffff;
 }
