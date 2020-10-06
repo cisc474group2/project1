@@ -83,7 +83,7 @@ let timingChecker=function() {
 
 
 let blinkLights=function() {
-    blinkLightCounter =  (blinkLightCounter + 1) % 3;
+    blinkLightCounter =  (blinkLightCounter + 1) % 2;
     if (blinkLightCounter == 0 && blinkLightOn == 0) {
         blinkLightOn = 1;
         blobj.classList.add('warningRed');
