@@ -46,6 +46,15 @@
   height: 100%;
 }
 
+#retryButton{
+  width: 50%;
+  height: 30%;
+  color: red;
+  background-color: black;
+  border-color: red;
+  margin: 15% 21%;
+}
+
 #moduleSize {
   width:  93.75%;
   height: 93.75%;
