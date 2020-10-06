@@ -67,7 +67,7 @@ function gameLoss() {
     mbb.classList.add("bombBackgroundLoss");
     var retry = document.createElement("button");
     retry.setAttribute("id", "retryButton");
-    retry.innerHTML = "Try again...";
+    retry.innerHTML = "Click to try again...";
     mbb.appendChild(retry);
     document.getElementById("retryButton").addEventListener("click", function(){
         location.href = "startScreen.html";
