@@ -1,5 +1,9 @@
 document.getElementById("clockInnerBorder").innerHTML=clockTicks[0].toString(10)+clockTicks[1].toString(10)+":"+clockTicks[2].toString(10)+clockTicks[3].toString(10);
 
+let getTime=function(){
+    return clockTicks;
+}
+
 let tickDown=function(){
     if (stopTheClock == 0) {
         clockTicks[3]--;

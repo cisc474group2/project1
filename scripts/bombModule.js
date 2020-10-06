@@ -10,6 +10,13 @@ var portNames = [];
 var serialNumber = [];
 var lightOn = true;
 
+var getBombInfo=function(){
+    /** 
+     * returns an array containing boolean lightOn, String indicatorLabel,
+     *  String array batteryNames, and String array portNames in that order
+    */
+   return [lightOn, indicatorLabel, batteryNames, portNames];
+}
 // Populates bomb randomly with ports, indicators and batteries 
 function fillBomb() {
 
