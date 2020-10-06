@@ -38,7 +38,7 @@
   border-style: solid;
   width: fit-content;
   height: fit-content;
-  background-color: rgba(255, 255, 255);
+  background-color: brown;
   padding: 3%;
   font-size: 2vh;
   text-align: left;
@@ -63,6 +63,7 @@
 .genericModule {
   width:100%;
   height:100%;
+  background-color: silver;
 }
 
 #genericBombOverlay {
@@ -133,4 +134,11 @@
 .warningRed {
   color: #aa00009e;
   background-color: #aa00009e;
+}
+
+#numberOfBombModulesComplete{
+  float: right;
+  display: flex;
+  align-items: center;
+  color: white;
 }
