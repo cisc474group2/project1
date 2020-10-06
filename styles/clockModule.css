@@ -15,7 +15,7 @@
     border-color:black;
     border-width: .2vw;
     color: red;
-    font-size: 3vw;
+    font-size: 225%;
     text-indent: 22%;
     background-color: black;
 }
@@ -46,10 +46,11 @@
     border-color:black;
     border-width: .18vw;
     text-align: center;
-    font-size: 10vw;
+    font-size: 500%;
     background-color: black;
     color: red;
     margin-bottom: 5%;
+    padding-top: 15%;
 }
 
 /*.offLight {
