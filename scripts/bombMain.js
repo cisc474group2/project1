@@ -56,6 +56,14 @@ function gameLoss() {
     mbb.innerHTML = "";
     mbb.classList.remove("bombBackgroundGame");
     mbb.classList.add("bombBackgroundLoss");
+    var retry = document.createElement("button");
+    retry.setAttribute("id", "retryButton");
+    retry.innerHTML = "Try again...";
+    mbb.appendChild(retry);
+    document.getElementById("retryButton").addEventListener("click", function(){
+        location.href = "startScreen.html";
+    });
+    
 }
 
 var addSuccess=function() {
