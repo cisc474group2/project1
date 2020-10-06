@@ -135,3 +135,10 @@
   color: #aa00009e;
   background-color: #aa00009e;
 }
+
+#numberOfBombModulesComplete{
+  float: right;
+  display: flex;
+  align-items: center;
+  color: white;
+}
