@@ -1,0 +1,230 @@
+#simonBackground {
+    width:  600px;
+    height: 600px;
+}
+
+#simonOverlay {
+    background:url('../images/SimonComponent.svg');
+    width:100%;
+    height:100%;
+
+/*  Old Scale System
+    margin: 20px 20px;
+    width: 600px;
+    height:600px; */
+    position:relative;
+}
+
+#simonInnerBorder {
+    padding:3.33%;
+/*  Old Scale System
+    padding: 20px; */
+}
+
+#simonUpperSegment {
+    padding:4.46%;
+    padding-right: 6.83%;
+    width:88.3%;
+    height: 8.33%
+
+/*  Old Scale System
+    padding:25px;
+    padding-right: 41px;
+    width:494px; */
+}
+
+#simonUpperSegmentHeader {
+    width:89.94%;
+    height: 8.333%;
+    float:left;
+
+/*
+    width:425px;
+    height: 50px;
+    float:left; */
+}
+
+#upperSegmentLight {
+    float:right;
+    height:100%;
+    width:10.06%;
+
+/*
+    height:50px;
+    width:50px; */
+}
+
+.simonIndicatorLight {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    display: inline-block;
+/*
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: inline-block; */
+}
+
+#blueSimonTop{
+    margin-left: 34%;
+    margin-top: -6%;
+    width: 50%;
+    width: 0;
+    height: 0;
+    border: 2.4vw solid transparent;
+    border-bottom-color: blue;
+    position: relative;
+    top: -2.4vw;
+}
+
+#blueSimonBottom{
+    margin-left: 34%;
+    margin-top: 1%;
+    width: 50%;
+    width: 0;
+    height: 0;
+    border: 2.4vw solid transparent;
+    border-top-color: blue;
+    position: relative;
+    top: 2.4vw;
+    left: -2.4vw;
+}
+
+#redSimonTop{
+    margin-left: 17.7%;
+    margin-top: -15.7%;
+    width: 0;
+    height: 0;
+    border: 2.4vw solid transparent;
+    border-bottom-color: rgb(206, 7, 7);
+    position: relative;
+    top: -2.4vw;
+}
+
+#redSimonBottom{
+    margin-left: 17.7%;
+    margin-top: -15.7%;
+    width: 0;
+    height: 0;
+    border: 2.4vw solid transparent;
+    border-top-color: rgb(206, 7, 7);
+    position: relative;
+    top: 2.4vw;
+    left: -2.4vw;
+}
+
+#yellowSimonTop{
+    margin-left: 50.2%;
+    margin-top: -48.4%;
+    width: 70%;
+    width: 0;
+    height: 0;
+    border: 2.4vw solid transparent;
+    border-bottom-color: rgb(255, 224, 0 );
+    position: relative;
+    top: -2.4vw;
+}
+
+#yellowSimonBottom{
+    margin-left: 50.2%;
+    margin-top: -48.4%;
+    width: 70%;
+    width: 0;
+    height: 0;
+    border: 2.4vw solid transparent;
+    border-top-color: rgb(255, 224, 0 );
+    position: relative;
+    top: 2.4vw;
+    left: -2.4vw
+}
+
+#greenSimonTop{
+    margin-left: 34%;
+    margin-top: -15.8%;
+    width: 50%;
+    width: 0;
+    height: 0;
+    border: 2.4vw solid transparent;
+    border-bottom-color: green;
+    position: relative;
+    top: -2.4vw;
+}
+
+#greenSimonBottom{
+    margin-left: 34%;
+    margin-top: -15.8%;
+    width: 50%;
+    width: 0;
+    height: 0;
+    border: 2.4vw solid transparent;
+    border-top-color: green;
+    position: relative;
+    top: 2.4vw;
+    left: -2.4vw;
+}
+
+
+#diamond {
+    width: 0;
+    height: 0;
+    border: 2.5vw solid transparent;
+    border-bottom-color: red;
+    position: relative;
+    top: -2.5vw;
+  }
+  
+  #diamond:after {
+    content: '';
+    position: absolute;
+    left: -2.5vw;
+    top: 2.5vw;
+    width: 0;
+    height: 0;
+    border: 2.5vw solid transparent;
+    border-top-color: red;
+  }
+
+.offLight {
+    background-color: #bbb;
+}
+
+.errorRed {
+    background-color: #e62828;
+}
+
+.successGreen {
+    background-color: #28e64f;
+}
+
+.simonYellow {
+    border-color: rgb(255, 224, 0 );
+}
+
+.simonBlue {
+    border-color: blue;
+}
+
+.simonRed {
+    border-color: rgb(206, 7, 7);
+}
+
+.simonGreen {
+    border-color: green;
+}
+
+.simonLightYellow {
+    border-color: rgb(250, 250, 98);
+}
+
+.simonLightBlue {
+    border-color: rgb(0, 191, 255);
+}
+
+.simonLightRed {
+    border-color: red;
+}
+
+.simonLightGreen {
+    border-color: rgb(128, 253, 128);
+}

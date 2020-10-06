@@ -1,0 +1,66 @@
+
+#clockOverlay {
+    width:100%;
+    height:100%;
+    position:relative;
+}
+
+#clockUpperSegment {
+    width:30%;
+    height:20%;
+    margin-top:4%;
+    margin-left:33.7%;
+    border-style: solid;
+    border-radius: 9%;
+    border-color:black;
+    border-width: .2vw;
+    color: red;
+    font-size: 225%;
+    text-indent: 22%;
+    background-color: black;
+}
+
+#clockUpperSegmentHeader {
+    width:89.94%;
+    height: 8.333%;
+    float:left;
+}
+
+#clockOuterBorder{
+    margin-left:3%;
+    margin-top:1%;
+    height:90%;
+    width:95%;
+    border-style:solid;
+    border-color:black;
+    border-width: .18vw;
+    background-color: gray;
+}
+
+#clockInnerBorder{
+    margin-left:4.2%;
+    margin-top:.3%;
+    height:70%;
+    width:90%;
+    border-style:solid;
+    border-color:black;
+    border-width: .18vw;
+    text-align: center;
+    font-size: 500%;
+    background-color: black;
+    color: red;
+    margin-bottom: 5%;
+    padding-top: 15%;
+}
+
+/*.offLight {
+    background-color: #bbb;
+}
+
+.errorRed {
+    background-color: #e62828;
+}
+
+.successGreen {
+    background-color: #28e64f;
+}*/

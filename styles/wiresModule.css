@@ -1,0 +1,108 @@
+#background {
+    width:  600px;
+    height: 600px;
+}
+
+#wiresOverlay {
+    /* background:url('../images/Component.svg'); */
+    width:100%;
+    height:100%;
+
+/*  Old Scale System
+    margin: 20px 20px;
+    width: 600px;
+    height:600px; */
+    position:relative;
+}
+
+#innerBorder {
+    padding:3.33%;
+    height: 100%;
+}
+
+#wiresUpperSegment {
+    padding-top: 3.5%;
+    width: 100%;
+    height: 14%;
+    margin-bottom: 4.5%;
+}
+
+#wiresUpperSegmentHeader {
+    padding-left: 5%;
+    width:75%;
+    height: 8.333%;
+    float: left;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#wiresUpperSegmentLight {
+    margin-right: 6.75%;
+    width: 10%;
+    height: 100%;
+    float: right;
+    vertical-align: middle;
+}
+
+/*indicatorLight {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    display: inline-block;
+}*/
+
+/*.offLight {
+    background-color: #bbb;
+}
+
+.errorRed {
+    background-color: #e62828;
+}
+
+.successGreen {
+    background-color: #28e64f;
+}*/
+
+#wiresLowerSegment{
+    padding-top: 5%;
+    width: 100%;
+    margin: 0 auto;
+    border: 3px solid #000000;
+}
+
+.wire-module{
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    background-color: gray;
+}
+
+.wire{
+    margin: 5%;
+    height: 2.5%;
+    width: 80%;
+}
+
+.blackWire{
+    background: #000000;
+}
+
+.redWire{
+    background: #e62828;
+}
+
+.blueWire{
+    background: blue;
+}
+
+.yellowWire{
+    background: yellow;
+}
+
+.whiteWire{
+    background: #ffffff;
+}
+
+.cut-wire{
+    background: gray;
+}
