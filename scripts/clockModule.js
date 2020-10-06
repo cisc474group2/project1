@@ -9,8 +9,10 @@ let tickDown=function(){
         clockTicks[3]--;
         updateClock(clockTicks,3);
         document.getElementById("clockInnerBorder").innerHTML=clockTicks[0].toString(10)+clockTicks[1].toString(10)+":"+clockTicks[2].toString(10)+clockTicks[3].toString(10);
-        alarmAudioChecker();
+        timingChecker();
+        blinkLights();
         if(clockTicks[0]==0 && clockTicks[1]==0 && clockTicks[2]==0 && clockTicks[3]==0 && stopTheClock == 0){
+            blinkLightCounter = -1;
             cleanUpClock()
             //lose goes here
         }
@@ -66,12 +68,29 @@ let cleanUpClock = function() {
     gameLoss();
 }
 
-let alarmAudioChecker=function() {
+let timingChecker=function() {
     if (clockTicks[0] == 0 & clockTicks[1] == 0 & clockTicks[2] == 4 & clockTicks[3] == 5) {
         alarmAudio.play();
     }
     else if (clockTicks[0] == 0 & clockTicks[1] == 0 & clockTicks[2] == 2 && clockTicks[3] == 9) {
+        blinkLightOn = 0;
         alarmAudio.play();
+    }
+    if (clockTicks[0] == 0 & clockTicks[1] == 0 & clockTicks[2] == 5 & clockTicks[3] == 9) {
+        blinkLightOn = 0;
+    }
+}
+
+
+let blinkLights=function() {
+    blinkLightCounter =  (blinkLightCounter + 1) % 3;
+    if (blinkLightCounter == 0 && blinkLightOn == 0) {
+        blinkLightOn = 1;
+        blobj.classList.add('warningRed');
+    }
+    else if (blinkLightCounter == 0 && blinkLightsOn == 1) {
+        blinkLightsOn = 0;
+        blobj.classList.remove('warningRed');
     }
 }
 
