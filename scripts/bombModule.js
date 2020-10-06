@@ -10,6 +10,13 @@ var portNames = [];
 var serialNumber = [];
 var lightOn = true;
 
+var getBombInfo=function(){
+    /** 
+     * returns an array containing boolean lightOn, String indicatorLabel,
+     *  String array batteryNames, and String array portNames in that order
+    */
+   return [lightOn, indicatorLabel, batteryNames, portNames];
+}
 // Populates bomb randomly with ports, indicators and batteries 
 function fillBomb() {
 
@@ -34,7 +41,7 @@ function fillBomb() {
         $('#bombIndicatorLight').addClass("lightOff");
     }
 
-    for(i=0;i<6;i++){
+    for(i=0;i<5;i++){
         if(Math.random()<.5){
             serialNumber[i]=Math.floor(Math.random()*10);
         }
@@ -42,6 +49,9 @@ function fillBomb() {
             serialNumber[i]=String.fromCharCode(Math.floor(Math.random()*26)+65);
         }
     }
+    serialNumber[5]=Math.floor(Math.random()*10);
+    //Forces the last digit to be a ditgit
+
     $('#bombSerialNumber').html("Serial Number: " + serialNumber[0] + serialNumber[1] + serialNumber[2] + serialNumber[3] + serialNumber[4] + serialNumber[5]);
 
     indicatorLabel = allIndicatorLabels[Math.floor(Math.random()*allIndicatorLabels.length)];
