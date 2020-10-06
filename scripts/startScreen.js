@@ -40,8 +40,16 @@ document.getElementById("startTimeRight").addEventListener("click", function(){
     updateStartClock();
 });
 
+document.getElementById("startModuleNumLeft").addEventListener("click", function(){
+
+});
+
+document.getElementById("startModuleNumRight").addEventListener("click", function(){
+
+});
+
 let updateStartClock = function(){
-    document.getElementById("timeText").innerHTML = clockTicks[0].toString(10)+clockTicks[1].toString(10)+":"+clockTicks[2].toString(10)+clockTicks[3].toString(10);
+    document.getElementById("timeText").innerHTML = "Time: " + clockTicks[0].toString(10)+clockTicks[1].toString(10)+":"+clockTicks[2].toString(10)+clockTicks[3].toString(10);
 }
 
 updateStartClock();
