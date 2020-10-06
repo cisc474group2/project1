@@ -3,24 +3,26 @@
         <div id="clockOverlay">
             <div id="clockOuterBorder">
                 <div id="clockUpperSegment">
-                    <script type="text/javascript">
-                        var clockTickTockAudio = new Audio('../audio/tickTock.wav');
-                        var alarmAudio = new Audio('../audio/loudAlarmBuzzer.wav');
-
-                        clockTickTockAudio.addEventListener('ended', function () {
-                            this.currentTime = 0;
-                            this.volume = .3;
-                            this.play();
-                        }, false);
-                        clockTickTockAudio.load();
-                        clockTickTockAudio.play();
-
-                        alarmAudio.addEventListener('ended', function () {
-                            this.currentTime = 0;
-                            this.play();
-                        }, false);
-                        //$('audio#clockTickTock')[0].play();
-                    </script>
+                    <div id="clockUpperSegmentInner">
+                        <script type="text/javascript">
+                            var clockTickTockAudio = new Audio('../audio/tickTockAlt.wav');
+                            var alarmAudio = new Audio('../audio/loudAlarmBuzzer.wav');
+    
+                            clockTickTockAudio.addEventListener('ended', function () {
+                                this.currentTime = 0;
+                                this.volume = .3;
+                                this.play();
+                            }, false);
+                            clockTickTockAudio.load();
+                            clockTickTockAudio.volume = .3;
+                            clockTickTockAudio.play();
+                            alarmAudio.addEventListener('ended', function () {
+                                this.currentTime = 0;
+                                this.play();
+                            }, false);
+                            //$('audio#clockTickTock')[0].play();
+                        </script>
+                    </div>
                 </div>
                 <div id="clockInnerBorder">
 

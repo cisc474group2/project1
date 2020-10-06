@@ -1,13 +1,23 @@
-.bombBackground {
+.bombBackgroundGame {
   background:url('../images/bombBackround.jpg');
-  height: 100vw;
-  width: 100vw;
   position:relative;
   background-position: 60% 24%;
   background-repeat: no-repeat;
   padding: 23%;
   background-size: 110%;
   /*background-size: 150%;*/
+}
+
+.bombBackgroundLoss {
+  background-color: black;
+  position:relative;
+  background-size: 110%;
+  /*background-size: 150%;*/
+}
+
+.bombBackground {
+  height: 100vw;
+  width: 100vw;
 }
 
 .module-grid{
@@ -26,7 +36,7 @@
   border-style: solid;
   width: fit-content;
   height: fit-content;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255);
   padding: 3%;
   font-size: 2vh;
   text-align: left;

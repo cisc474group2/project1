@@ -181,7 +181,6 @@ function checkRollerStatus() {
 		});
 		addSuccess();
 		passwordSuccess = true;
-		addSuccess();
 	}
 	else {
 		addStrike();
