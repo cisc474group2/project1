@@ -64,7 +64,9 @@ var startGame = function (ct, numModules = 2, hd) {
             });
             numModulesLoaded++;
         } else {
-            $(module).hide();
+            //$(module).hide();
+
+            $(module).load("modules/emptyModule.html");
         }
     });
 
