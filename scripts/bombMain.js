@@ -8,6 +8,7 @@ var stopTheClock;
 
 var clockTicks;
 var strikes;
+var numOfAllowedStrikes;
 var toggleSound;
 var errorBuzzerSound;
 var explosionSound;
@@ -46,6 +47,12 @@ function gameLoss() {
     setTimeout(() => {
         explosionSound.play();
     }, 1000);
+    document.getElementById("masterBombBackground").innerHTML = "";
+    document.getElementById("masterBombBackground").style.background = "";
+    document.getElementById("masterBombBackground").style.backgroundColor = "black";
+    
+
+    
 }
 
 var addSuccess=function() {
