@@ -178,8 +178,8 @@ function CheckClick(){
 		correct++;
 		addGreenLight(correct);
 		if(correct == 5){
-			document.getElementById("whosOnFirstIndicatorLight").classList.remove('offLight');
-			document.getElementById("whosOnFirstIndicatorLight").classList.add('successGreen');
+			document.getElementById("whosOnFirstIndicatorLight").classList.remove('lightOff');
+			document.getElementById("whosOnFirstIndicatorLight").classList.add('lightOn');
 			addSuccess();
 			return;	
 		}
@@ -187,11 +187,11 @@ function CheckClick(){
 	}
 	else{
 		addStrike();
-		document.getElementById("whosOnFirstIndicatorLight").classList.remove('offLight');
-		document.getElementById("whosOnFirstIndicatorLight").classList.add('errorRed');
+		document.getElementById("whosOnFirstIndicatorLight").classList.remove('lightOff');
+		document.getElementById("whosOnFirstIndicatorLight").classList.add('red');
 		setTimeout(function(){
-			document.getElementById("whosOnFirstIndicatorLight").classList.remove('errorRed');
-			document.getElementById("whosOnFirstIndicatorLight").classList.add('offLight');
+			document.getElementById("whosOnFirstIndicatorLight").classList.remove('red');
+			document.getElementById("whosOnFirstIndicatorLight").classList.add('lightOff');
 			generateGameData();
 		}, 1000)
 		
