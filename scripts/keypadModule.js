@@ -80,10 +80,10 @@ secondButton.addEventListener("click", function(){
     }
     else{
         addStrike();
-        firstButton.style.backgroundColor = "white";
-        secondButton.style.backgroundColor = "white";
-        thirdButton.style.backgroundColor = "white";
-        fourthButton.style.backgroundColor = "white";
+        firstButton.style.backgroundColor = "wheat";
+        secondButton.style.backgroundColor = "wheat";
+        thirdButton.style.backgroundColor = "wheat";
+        fourthButton.style.backgroundColor = "wheat";
         firstButton.disabled = false;
         secondButton.disabled = false;
         thirdButton.disabled = false;
@@ -104,10 +104,10 @@ thirdButton.addEventListener("click", function(){
     else{
         addStrike();
         document.getElementById("keypadIndicatorLight").className = "genericIndicatorLight keypaderrorRed";
-        firstButton.style.backgroundColor = "white";
-        secondButton.style.backgroundColor = "white";
-        thirdButton.style.backgroundColor = "white";
-        fourthButton.style.backgroundColor = "white";
+        firstButton.style.backgroundColor = "wheat";
+        secondButton.style.backgroundColor = "wheat";
+        thirdButton.style.backgroundColor = "wheat";
+        fourthButton.style.backgroundColor = "wheat";
         firstButton.disabled = false;
         secondButton.disabled = false;
         thirdButton.disabled = false;
@@ -127,10 +127,10 @@ fourthButton.addEventListener("click", function(){
     }
     else{
         addStrike();
-        firstButton.style.backgroundColor = "white";
-        secondButton.style.backgroundColor = "white";
-        thirdButton.style.backgroundColor = "white";
-        fourthButton.style.backgroundColor = "white";
+        firstButton.style.backgroundColor = "wheat";
+        secondButton.style.backgroundColor = "wheat";
+        thirdButton.style.backgroundColor = "wheat";
+        fourthButton.style.backgroundColor = "wheat";
         firstButton.disabled = false;
         secondButton.disabled = false;
         thirdButton.disabled = false;
