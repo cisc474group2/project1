@@ -4,7 +4,7 @@
 }
 
 .emptyOverlay {
-    background:url('../images/grid.png');
+    /*background:url('../images/grid.png');*/
     margin:3.33% 3.33%;
     padding:3.33%;
     width:100%;
