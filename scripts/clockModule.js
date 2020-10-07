@@ -1,22 +1,24 @@
 document.getElementById("clockInnerBorder").innerHTML=clockTicks[0].toString(10)+clockTicks[1].toString(10)+":"+clockTicks[2].toString(10)+clockTicks[3].toString(10);
 
+var clockIntervalID;
+
 let getTime=function(){
     return clockTicks;
 }
 
 let tickDown=function(){
-    if (stopTheClock == 0) {
+    //if (stopTheClock == 0) {
         clockTicks[3]--;
         updateClock(clockTicks,3);
         document.getElementById("clockInnerBorder").innerHTML=clockTicks[0].toString(10)+clockTicks[1].toString(10)+":"+clockTicks[2].toString(10)+clockTicks[3].toString(10);
         timingChecker();
         blinkLights();
-        if(clockTicks[0]==0 && clockTicks[1]==0 && clockTicks[2]==0 && clockTicks[3]==0 && stopTheClock == 0){
+        if(clockTicks[0]==0 && clockTicks[1]==0 && clockTicks[2]==0 && clockTicks[3]==0){
             blinkLightOn = -1;
             cleanUpClock();
             //lose goes here
         }
-    }
+    //}
 };
 
 let updateClock=function(clock,pos){
@@ -41,14 +43,14 @@ let updateClock=function(clock,pos){
 };
 
 let clockStart=function(){ 
-    setInterval(tickDown, 1000);
+    clockIntervalID=setInterval(tickDown, 1000);
 };
 
 let addStrike=function(){
     strikes++;
     errorBuzzerSound.play();
     if (strikes < numOfAllowedStrikes) {
-        document.getElementById("clockUpperSegment").innerHTML += "X";
+        document.getElementById("clockUpperSegment").innerHTML += " X";
     }
     else{
         //document.getElementById("upperSegment").innerHTML="X X X";
@@ -61,7 +63,10 @@ let cleanUpClock = function() {
     console.log("stop Clock");
     alarmAudio.pause();
     clockTickTockAudio.pause();
-    stopTheClock = 1;
+    clearInterval(clockIntervalID);
+    if(simonIntervalID!=null){
+        clearInterval(simonIntervalID);
+    }
     gameLoss();
 };
 
