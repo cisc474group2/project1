@@ -41,12 +41,14 @@ var Button6 = document.getElementById("whosOnFirstButton6");
 var IndicatorLight1 = document.getElementById("whosOnFirstLight1");
 var IndicatorLight2 = document.getElementById("whosOnFirstLight2");
 var IndicatorLight3 = document.getElementById("whosOnFirstLight3");
+var IndicatorLight4 = document.getElementById("whosOnFirstLight4");
+var IndicatorLight5 = document.getElementById("whosOnFirstLight5");
 
 var correct = 0;
 
 
 var ButtonsArray = [Button1, Button2, Button3, Button4, Button5, Button6];
-var Display = document.getElementById("DisplayText");
+var Display = document.getElementById("whosOnFirstDisplayText");
 //blank game data
  GameData = {
 	 "buttons": ['','','','','',''],
@@ -160,6 +162,12 @@ function addGreenLight(countOfCorrect){
 			break;
 		case 3:
 			document.getElementById("whosOnFirstLight3").style.backgroundColor = "#28e64f";
+			break;
+		case 4:
+			document.getElementById("whosOnFirstLight4").style.backgroundColor = "#28e64f";
+			break;
+		case 5:
+			document.getElementById("whosOnFirstLight5").style.backgroundColor = "#28e64f";
 			break;	
 	}
 }
@@ -171,19 +179,19 @@ function CheckClick(){
 	if($(this).text() === GameData.WordToPress){
 		correct++;
 		addGreenLight(correct);
-		if(correct == 3){
-			document.getElementById("WhosOnFirstIndicatorLight").classList.remove('offLight');
-			document.getElementById("WhosOnFirstIndicatorLight").classList.add('successGreen');
+		if(correct == 5){
+			document.getElementById("whosOnFirstIndicatorLight").classList.remove('offLight');
+			document.getElementById("whosOnFirstIndicatorLight").classList.add('successGreen');
 			return;	
 		}
 		generateGameData();
 	}
 	else{
-		document.getElementById("WhosOnFirstIndicatorLight").classList.remove('offLight');
-		document.getElementById("WhosOnFirstIndicatorLight").classList.add('errorRed');
+		document.getElementById("whosOnFirstIndicatorLight").classList.remove('offLight');
+		document.getElementById("whosOnFirstIndicatorLight").classList.add('errorRed');
 		setTimeout(function(){
-			document.getElementById("WhosOnFirstIndicatorLight").classList.remove('errorRed');
-			document.getElementById("WhosOnFirstIndicatorLight").classList.add('offLight');
+			document.getElementById("whosOnFirstIndicatorLight").classList.remove('errorRed');
+			document.getElementById("whosOnFirstIndicatorLight").classList.add('offLight');
 			generateGameData();
 		}, 1000)
 		
