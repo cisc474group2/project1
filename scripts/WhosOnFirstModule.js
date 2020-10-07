@@ -31,16 +31,16 @@ var ClickWords = {
 }
 
 //importing buttons from html
-var Button1 = document.getElementById("Button1");
-var Button2 = document.getElementById("Button2");
-var Button3 = document.getElementById("Button3");
-var Button4 = document.getElementById("Button4");
-var Button5 = document.getElementById("Button5");
-var Button6 = document.getElementById("Button6");
+var Button1 = document.getElementById("whosOnFirstButton1");
+var Button2 = document.getElementById("whosOnFirstButton2");
+var Button3 = document.getElementById("whosOnFirstButton3");
+var Button4 = document.getElementById("whosOnFirstButton4");
+var Button5 = document.getElementById("whosOnFirstButton5");
+var Button6 = document.getElementById("whosOnFirstButton6");
 
-var IndicatorLight1 = document.getElementById("Light1");
-var IndicatorLight2 = document.getElementById("Light2");
-var IndicatorLight3 = document.getElementById("Light3");
+var IndicatorLight1 = document.getElementById("whosOnFirstLight1");
+var IndicatorLight2 = document.getElementById("whosOnFirstLight2");
+var IndicatorLight3 = document.getElementById("whosOnFirstLight3");
 
 var correct = 0;
 
@@ -153,18 +153,18 @@ function generateDisplayWord(ButtonNumber){
 function addGreenLight(countOfCorrect){
 	switch(countOfCorrect){
 		case 1:
-			document.getElementById("Light1").style.backgroundColor = "#28e64f";
+			document.getElementById("whosOnFirstLight1").style.backgroundColor = "#28e64f";
 			break;
 		case 2:
-			document.getElementById("Light2").style.backgroundColor = "#28e64f";
+			document.getElementById("whosOnFirstLight2").style.backgroundColor = "#28e64f";
 			break;
 		case 3:
-			document.getElementById("Light3").style.backgroundColor = "#28e64f";
+			document.getElementById("whosOnFirstLight3").style.backgroundColor = "#28e64f";
 			break;	
 	}
 }
 
-$(".WordButton").click(CheckClick);
+$(".whosOnFirstWordButton").click(CheckClick);
 
 function CheckClick(){
 	
