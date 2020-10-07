@@ -63,6 +63,7 @@ let goodClick=function(){
     }
     else if(corPos==seqPos && seqPos==length){
         addSuccess();
+        document.getElementById("simonIndicatorLight").className = "genericIndicatorLight successGreen";
         document.getElementById("blueSimonClick").removeEventListener("click", blueLight);
         document.getElementById("redSimonClick").removeEventListener("click", redLight);
         document.getElementById("yellowSimonClick").removeEventListener("click", yellowLight);
@@ -76,6 +77,7 @@ let goodClick=function(){
 
 let badClick=function(){
     //console.log("bad");
+    document.getElementById("simonIndicatorLight").className = "genericIndicatorLight errorRed";
     addStrike();
     clearInterval(simonIntervalID);
     seqPos=1;
