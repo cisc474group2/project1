@@ -117,12 +117,6 @@ $(document).ready(function(){
         if(this.classList.contains('correct')){
             document.getElementById('indicatorLight').classList.remove("red");
             document.getElementById('indicatorLight').classList.add("lightOn");
-            for (var i = 0; i < list.length; i++) {
-                console.log('hello');
-                console.log(list);
-                $(list[i]).classList.remove('wire');
-                console.log(list[i]);
-            }
             addSuccess();
         }else{
             document.getElementById('indicatorLight').classList.add("red");
