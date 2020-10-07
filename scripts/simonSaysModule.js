@@ -2,13 +2,13 @@ let length;
 let sequence=[];
 let seqPos;
 let corPos;
-let intervalID;
+let simonsimonIntervalID;
 
 let startSimon=function(){
-    document.getElementById("blueSimonTop").addEventListener("click", blueLight);
-    document.getElementById("redSimonTop").addEventListener("click", redLight);
-    document.getElementById("yellowSimonTop").addEventListener("click", yellowLight);
-    document.getElementById("greenSimonTop").addEventListener("click", greenLight);
+    document.getElementById("blueSimonClick").addEventListener("click", blueLight);
+    document.getElementById("redSimonClick").addEventListener("click", redLight);
+    document.getElementById("yellowSimonClick").addEventListener("click", yellowLight);
+    document.getElementById("greenSimonClick").addEventListener("click", greenLight);
     setSequence();
 }
 
@@ -26,7 +26,7 @@ let playSequence=function(){
     corPos=0;
     setAnswer(sequence[corPos]);
     //console.log(seqPos+" "+length);
-    intervalID=setInterval(showColor,5000);
+    simonIntervalID=setInterval(showColor,5000);
 }
 
 let showColor=function(){
@@ -54,7 +54,7 @@ let showColor=function(){
 }
 
 let goodClick=function(){
-    console.log("good");
+    //console.log("good");
     //console.log(corPos+" "+seqPos);
     corPos++;
     if(corPos==seqPos && seqPos!=length){
@@ -63,11 +63,11 @@ let goodClick=function(){
     }
     else if(corPos==seqPos && seqPos==length){
         addSuccess();
-        document.getElementById("blueSimonTop").removeEventListener("click", blueLight);
-        document.getElementById("redSimonTop").removeEventListener("click", redLight);
-        document.getElementById("yellowSimonTop").removeEventListener("click", yellowLight);
-        document.getElementById("greenSimonTop").removeEventListener("click", greenLight);
-        clearInterval(intervalID);
+        document.getElementById("blueSimonClick").removeEventListener("click", blueLight);
+        document.getElementById("redSimonClick").removeEventListener("click", redLight);
+        document.getElementById("yellowSimonClick").removeEventListener("click", yellowLight);
+        document.getElementById("greenSimonClick").removeEventListener("click", greenLight);
+        clearInterval(simonIntervalID);
         return;
     }
     setAnswer(sequence[corPos]);
@@ -75,23 +75,23 @@ let goodClick=function(){
 }
 
 let badClick=function(){
-    console.log("bad");
+    //console.log("bad");
     addStrike();
-    clearInterval(intervalID);
+    clearInterval(simonIntervalID);
     seqPos=1;
     corPos=0;
     setSequence();
 }
 
 let setAnswer=function(correct){
-    document.getElementById("blueSimonTop").removeEventListener("click", badClick);
-    document.getElementById("redSimonTop").removeEventListener("click", badClick);
-    document.getElementById("yellowSimonTop").removeEventListener("click", badClick);
-    document.getElementById("greenSimonTop").removeEventListener("click", badClick);
-    document.getElementById("blueSimonTop").removeEventListener("click", goodClick);
-    document.getElementById("redSimonTop").removeEventListener("click", goodClick);
-    document.getElementById("yellowSimonTop").removeEventListener("click", goodClick);
-    document.getElementById("greenSimonTop").removeEventListener("click", goodClick);
+    document.getElementById("blueSimonClick").removeEventListener("click", badClick);
+    document.getElementById("redSimonClick").removeEventListener("click", badClick);
+    document.getElementById("yellowSimonClick").removeEventListener("click", badClick);
+    document.getElementById("greenSimonClick").removeEventListener("click", badClick);
+    document.getElementById("blueSimonClick").removeEventListener("click", goodClick);
+    document.getElementById("redSimonClick").removeEventListener("click", goodClick);
+    document.getElementById("yellowSimonClick").removeEventListener("click", goodClick);
+    document.getElementById("greenSimonClick").removeEventListener("click", goodClick);
     switch(correct){
         case 0:
             if(checkSerial()){
@@ -198,34 +198,34 @@ let setAnswer=function(correct){
 
 let redGood=function(){
     console.log("red");
-    document.getElementById("blueSimonTop").addEventListener("click", badClick);
-    document.getElementById("redSimonTop").addEventListener("click", goodClick);
-    document.getElementById("yellowSimonTop").addEventListener("click", badClick);
-    document.getElementById("greenSimonTop").addEventListener("click", badClick);
+    document.getElementById("blueSimonClick").addEventListener("click", badClick);
+    document.getElementById("redSimonClick").addEventListener("click", goodClick);
+    document.getElementById("yellowSimonClick").addEventListener("click", badClick);
+    document.getElementById("greenSimonClick").addEventListener("click", badClick);
 }
 
 let blueGood=function(){
     console.log("blue");
-    document.getElementById("blueSimonTop").addEventListener("click", goodClick);
-    document.getElementById("redSimonTop").addEventListener("click", badClick);
-    document.getElementById("yellowSimonTop").addEventListener("click", badClick);
-    document.getElementById("greenSimonTop").addEventListener("click", badClick);
+    document.getElementById("blueSimonClick").addEventListener("click", goodClick);
+    document.getElementById("redSimonClick").addEventListener("click", badClick);
+    document.getElementById("yellowSimonClick").addEventListener("click", badClick);
+    document.getElementById("greenSimonClick").addEventListener("click", badClick);
 }
 
 let yellowGood=function(){
     console.log("yellow");
-    document.getElementById("blueSimonTop").addEventListener("click", badClick);
-    document.getElementById("redSimonTop").addEventListener("click", badClick);
-    document.getElementById("yellowSimonTop").addEventListener("click", goodClick);
-    document.getElementById("greenSimonTop").addEventListener("click", badClick);
+    document.getElementById("blueSimonClick").addEventListener("click", badClick);
+    document.getElementById("redSimonClick").addEventListener("click", badClick);
+    document.getElementById("yellowSimonClick").addEventListener("click", goodClick);
+    document.getElementById("greenSimonClick").addEventListener("click", badClick);
 }
 
 let greenGood=function(){
     console.log("green");
-    document.getElementById("blueSimonTop").addEventListener("click", badClick);
-    document.getElementById("redSimonTop").addEventListener("click", badClick);
-    document.getElementById("yellowSimonTop").addEventListener("click", badClick);
-    document.getElementById("greenSimonTop").addEventListener("click", goodClick);
+    document.getElementById("blueSimonClick").addEventListener("click", badClick);
+    document.getElementById("redSimonClick").addEventListener("click", badClick);
+    document.getElementById("yellowSimonClick").addEventListener("click", badClick);
+    document.getElementById("greenSimonClick").addEventListener("click", goodClick);
 }
 
 let blueLight=function(){
