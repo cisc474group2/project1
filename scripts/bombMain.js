@@ -13,6 +13,7 @@ var successCount = 0;
 // var numModules = 2;//Chooses the number of modules (1-7)
 var numModulesLoaded = 0;
 //var stopTheClock;
+var simonIntervalID
 var userModules;
 var clockTicks;
 var strikes;

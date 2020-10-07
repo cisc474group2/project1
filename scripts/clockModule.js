@@ -64,7 +64,9 @@ let cleanUpClock = function() {
     alarmAudio.pause();
     clockTickTockAudio.pause();
     clearInterval(clockIntervalID);
-    clearInterval(simonIntervalID);
+    if(simonIntervalID!=null){
+        clearInterval(simonIntervalID);
+    }
     gameLoss();
 };
 
