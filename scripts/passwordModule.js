@@ -84,7 +84,7 @@ function fillRolodex() {
 	});
 
 	//console.log(rolodex);
-	//console.log(selectedWord)
+	console.log(selectedWord)
 	return rolodex;
 }
 
@@ -174,6 +174,7 @@ function checkRollerStatus() {
 	
 		if (reconstructedWord == selectedWord) {
 			document.getElementById("passwordIndicatorLight").classList.remove('lightOff');
+			document.getElementById("passwordIndicatorLight").classList.remove('red');
 			document.getElementById("passwordIndicatorLight").classList.add('lightOn');
 			triggers.forEach(x => {
 				var elem = document.getElementsByClassName(x)

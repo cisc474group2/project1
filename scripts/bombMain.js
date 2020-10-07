@@ -99,6 +99,7 @@ function gameLoss() {
 
 var addSuccess = function () {
     successCount += 1;
+
     if (successCount == numModulesLoaded) {
         console.log("game won");
         heartbeatSound.pause();
