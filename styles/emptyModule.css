@@ -1,0 +1,26 @@
+#passwordBackground {
+    width:  30vw;
+    height: 30vw;
+}
+
+.emptyOverlay {
+    background:url('../images/grid.png');
+    margin:3.33% 3.33%;
+    padding:3.33%;
+    width:100%;
+    height:100%;
+
+/*  Old Scale System
+    margin: 20px 20px;
+    width: 600px;
+    height:600px; */
+    position:relative;
+}
+
+#emptyInnerBorder {
+    height:100%;
+    padding:0%;
+    width:100%;
+/*  Old Scale System
+    padding: 20px; */
+}

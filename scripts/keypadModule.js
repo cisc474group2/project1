@@ -88,6 +88,7 @@ secondButton.addEventListener("click", function(){
         secondButton.disabled = false;
         thirdButton.disabled = false;
         fourthButton.disabled = false; 
+        document.getElementById("keypadIndicatorLight").className = "genericIndicatorLight keypaderrorRed";
         count = 0;   
     }
 
@@ -102,6 +103,7 @@ thirdButton.addEventListener("click", function(){
     }
     else{
         addStrike();
+        document.getElementById("keypadIndicatorLight").className = "genericIndicatorLight keypaderrorRed";
         firstButton.style.backgroundColor = "white";
         secondButton.style.backgroundColor = "white";
         thirdButton.style.backgroundColor = "white";
@@ -119,7 +121,7 @@ fourthButton.addEventListener("click", function(){
     // first second and third buttons have all been clicked
     if(count == 3){
         fourthButton.style.backgroundColor =  "#28e64f";
-        document.getElementById("lightShow").className = "keypadindicatorLight keypadsuccessGreen";
+        document.getElementById("keypadIndicatorLight").className = "genericIndicatorLight keypadsuccessGreen";
         this.disabled = true;
         addSuccess();
     }
@@ -133,6 +135,7 @@ fourthButton.addEventListener("click", function(){
         secondButton.disabled = false;
         thirdButton.disabled = false;
         fourthButton.disabled = false;
+        document.getElementById("keypadIndicatorLight").className = "genericIndicatorLight keypaderrorRed";
         count = 0;    
     }
 

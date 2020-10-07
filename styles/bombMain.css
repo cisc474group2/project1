@@ -16,13 +16,13 @@
   /*background-size: 150%;*/
 }
 
-
 .bombBackground {
   height: 100vw;
   width: 100vw;
   background-blend-mode: multiply;
 }
 
+/*
 .module-grid{
   display: grid;
   grid-template-columns: 33.33% 33.33% 33.33%;
@@ -30,6 +30,16 @@
   background-color: #2196F300;
   padding: 0%;
   height: 100%;
+  width: 100%;
+}*/
+
+.module-grid{
+  display: grid;
+  grid-template-columns: 33.33% 33.33% 33.33%;
+  grid-template-rows: 50% 50%;
+  background-color: #2196F300;
+  padding: 0%;
+  height: 66.6666666666666666667%;
   width: 100%;
 }
 
@@ -57,8 +67,8 @@
 }
 
 #moduleSize {
-  width:  93.75%;
-  height: 93.75%;
+  width:  100%;
+  height: 100%;
 }
 
 .genericModule {
@@ -133,13 +143,6 @@
 }
 
 .warningRed {
-  /*color: #aa00009e;*/
+  color: #aa00009e;
   background-color: #aa00009e;
-}
-
-#numberOfBombModulesComplete{
-  float: right;
-  display: flex;
-  align-items: center;
-  color: white;
 }

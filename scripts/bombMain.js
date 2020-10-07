@@ -1,15 +1,12 @@
 // line 28- change sync strikes with hardcore on/off number of strikes
 // line 102- change '4' to user input for number of modules
 
-var allModuleNames = ['modules/buttonModule.html', 'modules/passwordModule.html', 'modules/wiresModule.html', 'modules/keypadModule.html'];
+var allModuleNames = ['modules/buttonModule.html', 'modules/passwordModule.html', 'modules/wiresModule.html', 'modules/keypadModule.html', 'modules/WhosOnFirst.html'];
 var modulesToBeFilled = [
     '#module0',
     '#module1',
     '#module2',
-    '#module3',
-    '#module4',
-    '#module5',
-    '#module6'
+    '#module3'
 ];
 
 var successCount = 0;
@@ -64,14 +61,16 @@ var startGame = function (ct, numModules = 2, hd) {
             });
             numModulesLoaded++;
         } else {
-            $(module).hide();
+            //$(module).hide();
+
+            $(module).load("modules/emptyModule.html");
         }
     });
 
 
     heartbeatSound.volume = .05;
     heartbeatSound.play();
-    heartbeatSound.loop = ture;
+    heartbeatSound.loop = true;
 }
 
 
@@ -100,7 +99,7 @@ var addSuccess = function () {
     successCount += 1;
     if (successCount == numModulesLoaded) {
         console.log("game won");
-        stopTheClock = 0;
+        stopTheClock = 1;
         setTimeout(() => {
             successSound.play();
         }, 500);
@@ -119,7 +118,7 @@ var addSuccess = function () {
 
 
     }
-}
+};
 
 function getUrlVars() {
     var vars = [],
@@ -131,7 +130,7 @@ function getUrlVars() {
         vars[hash[0]] = hash[1];
     }
     return vars;
-}
+};
 
 function decodeTime(t) {
     ct = [0, 0, 0, 0];
@@ -143,7 +142,7 @@ function decodeTime(t) {
     }
     console.log("ct", ct);
     return ct;
-}
+};
 
 $.when(getUrlVars(), $.ready).done(function (urlVars) {
     // Document is ready.
