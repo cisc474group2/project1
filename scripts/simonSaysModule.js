@@ -276,7 +276,7 @@ let greenLight=function(){
 
 let checkSerial=function(){
     for(i=0;i<6;i++){
-        console.log(serialNumber[i]);
+        //console.log(serialNumber[i]);
         if(serialNumber[i]=="A" || serialNumber[i]=="E" || serialNumber[i]=="I" || serialNumber[i]=="O" || serialNumber[i]=="U"){
             return true;
         }
