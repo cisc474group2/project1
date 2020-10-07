@@ -12,7 +12,7 @@ var modulesToBeFilled = [
 var successCount = 0;
 // var numModules = 2;//Chooses the number of modules (1-7)
 var numModulesLoaded = 0;
-var stopTheClock;
+//var stopTheClock;
 var userModules;
 var clockTicks;
 var strikes;
@@ -36,7 +36,7 @@ var startGame = function (ct, numModules = 2, hd) {
     // Prepares the clock
     clockTicks = ct;
     strikes = 0;
-    stopTheClock = 0;
+    //stopTheClock = 0;
     toggleSound = new Audio('../audio/toggleSound.wav');
     errorBuzzerSound = new Audio('../audio/buzzer.wav');
     dingSound = new Audio('../audio/ding.wav');
@@ -99,7 +99,7 @@ var addSuccess = function () {
     successCount += 1;
     if (successCount == numModulesLoaded) {
         console.log("game won");
-        stopTheClock = 1;
+        clearInterval(clockIntervalID);
         setTimeout(() => {
             successSound.play();
         }, 500);
