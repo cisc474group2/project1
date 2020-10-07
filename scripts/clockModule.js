@@ -50,7 +50,7 @@ let addStrike=function(){
     strikes++;
     errorBuzzerSound.play();
     if (strikes < numOfAllowedStrikes) {
-        document.getElementById("clockUpperSegment").innerHTML += "X";
+        document.getElementById("clockUpperSegment").innerHTML += " X";
     }
     else{
         //document.getElementById("upperSegment").innerHTML="X X X";
@@ -64,6 +64,7 @@ let cleanUpClock = function() {
     alarmAudio.pause();
     clockTickTockAudio.pause();
     clearInterval(clockIntervalID);
+    clearInterval(simonIntervalID);
     gameLoss();
 };
 

@@ -2,7 +2,7 @@ let length;
 let sequence=[];
 let seqPos;
 let corPos;
-let simonsimonIntervalID;
+var simonIntervalID;
 
 let startSimon=function(){
     document.getElementById("blueSimonClick").addEventListener("click", blueLight);
