@@ -20,7 +20,7 @@ $(document).ready(function(){
 
     var list = document.getElementsByClassName('wire');
 
-    for (i = 0; i < numWires; i++) {
+    for (var i = 0; i < numWires; i++) {
         wireColors.push(wireClasses[Math.floor((Math.random() * 5))]);
         $(list[i]).addClass(wireColors[i]);
     }
@@ -115,10 +115,17 @@ $(document).ready(function(){
     $('.wire').click(function(){
         $(this).addClass('cut-wire').removeClass('redWire').removeClass('whiteWire').removeClass('blueWire').removeClass('yellowWire').removeClass('blackWire');
         if(this.classList.contains('correct')){
-            document.getElementById('indicatorLight').className = "indicatorLight lightOn";
+            document.getElementById('indicatorLight').classList.remove("red");
+            document.getElementById('indicatorLight').classList.add("lightOn");
+            for (var i = 0; i < list.length; i++) {
+                console.log('hello');
+                console.log(list);
+                $(list[i]).classList.remove('wire');
+                console.log(list[i]);
+            }
             addSuccess();
         }else{
-            document.getElementById('indicatorLight').className = "indicatorLight red";
+            document.getElementById('indicatorLight').classList.add("red");
             addStrike();
         }
     });

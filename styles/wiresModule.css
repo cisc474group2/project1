@@ -77,32 +77,44 @@
     background-color: gray;
 }
 
-.wire{
+.blackWire{
+    background: #000000;
     margin: 5%;
     height: 2.5%;
     width: 80%;
 }
 
-.blackWire{
-    background: #000000;
-}
-
 .redWire{
     background: #e62828;
+    margin: 5%;
+    height: 2.5%;
+    width: 80%;
 }
 
 .blueWire{
     background: blue;
+    margin: 5%;
+    height: 2.5%;
+    width: 80%;
 }
 
 .yellowWire{
     background: yellow;
+    margin: 5%;
+    height: 2.5%;
+    width: 80%;
 }
 
 .whiteWire{
     background: #ffffff;
+    margin: 5%;
+    height: 2.5%;
+    width: 80%;
 }
 
 .cut-wire{
     background: gray;
+    margin: 5%;
+    height: 2.5%;
+    width: 80%;
 }
