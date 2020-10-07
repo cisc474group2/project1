@@ -84,7 +84,7 @@ function fillRolodex() {
 	});
 
 	//console.log(rolodex);
-	//console.log(selectedWord)
+	console.log(selectedWord)
 	return rolodex;
 }
 
@@ -162,32 +162,38 @@ function setInitialPos() {
 }
 
 function checkRollerStatus() {
-	var reconstructedWord = "";
-	var rol = Array.from(rolodex);
-	for (var k = 0; k < rolodexLength; k ++) {
-		reconstructedWord = reconstructedWord + Array.from(rol[k])[rolodexPosition[k]];
-	}
-
-	if (reconstructedWord == selectedWord) {
-		document.getElementById("passwordIndicatorLight").classList.remove('lightOff');
-		document.getElementById("passwordIndicatorLight").classList.add('lightOn');
-		triggers.forEach(x => {
-			var elem = document.getElementsByClassName(x)
-			Array.prototype.forEach.call(elem, function(y) {
-				//console.log(y, ", ", y.classList.contains(x));
-				y.classList.remove(x);
-				//console.log(y, ", ", y.classList.contains(x));
-			});
-		});
-		addSuccess();
-		passwordSuccess = true;
+	if (passwordSuccess == true) {
+		return true;
 	}
 	else {
-		addStrike();
-		document.getElementById("passwordIndicatorLight").classList.remove('lightOff');
-		document.getElementById("passwordIndicatorLight").classList.add('red');
+		var reconstructedWord = "";
+		var rol = Array.from(rolodex);
+		for (var k = 0; k < rolodexLength; k ++) {
+			reconstructedWord = reconstructedWord + Array.from(rol[k])[rolodexPosition[k]];
+		}
+	
+		if (reconstructedWord == selectedWord) {
+			document.getElementById("passwordIndicatorLight").classList.remove('lightOff');
+			document.getElementById("passwordIndicatorLight").classList.remove('red');
+			document.getElementById("passwordIndicatorLight").classList.add('lightOn');
+			triggers.forEach(x => {
+				var elem = document.getElementsByClassName(x)
+				Array.prototype.forEach.call(elem, function(y) {
+					//console.log(y, ", ", y.classList.contains(x));
+					y.classList.remove(x);
+					//console.log(y, ", ", y.classList.contains(x));
+				});
+			});
+			addSuccess();
+			passwordSuccess = true;
+		}
+		else {
+			addStrike();
+			document.getElementById("passwordIndicatorLight").classList.remove('lightOff');
+			document.getElementById("passwordIndicatorLight").classList.add('red');
+		}
+			
+	
+		return reconstructedWord == selectedWord;
 	}
-		
-
-	return reconstructedWord == selectedWord;
 }
