@@ -63,11 +63,19 @@ let goodClick=function(){
     }
     else if(corPos==seqPos && seqPos==length){
         addSuccess();
-        document.getElementById("simonIndicatorLight").className = "genericIndicatorLight successGreen";
         document.getElementById("blueSimonClick").removeEventListener("click", blueLight);
         document.getElementById("redSimonClick").removeEventListener("click", redLight);
         document.getElementById("yellowSimonClick").removeEventListener("click", yellowLight);
         document.getElementById("greenSimonClick").removeEventListener("click", greenLight);
+        document.getElementById("blueSimonClick").removeEventListener("click", badClick);
+        document.getElementById("redSimonClick").removeEventListener("click", badClick);
+        document.getElementById("yellowSimonClick").removeEventListener("click", badClick);
+        document.getElementById("greenSimonClick").removeEventListener("click", badClick);
+        document.getElementById("blueSimonClick").removeEventListener("click", goodClick);
+        document.getElementById("redSimonClick").removeEventListener("click", goodClick);
+        document.getElementById("yellowSimonClick").removeEventListener("click", goodClick);
+        document.getElementById("greenSimonClick").removeEventListener("click", goodClick);
+        document.getElementById("simonIndicatorLight").className = "genericIndicatorLight successGreen";
         clearInterval(simonIntervalID);
         return;
     }
