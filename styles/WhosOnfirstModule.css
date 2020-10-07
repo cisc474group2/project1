@@ -1,12 +1,12 @@
 #background {
-    width:  600px;
-    height: 600px;
+    width:  100%;
+    height: 100%;
     font-family: 'Courier New', Courier, monospace;
+    font-size: .75vw;
 }
 
 #overlay {
     /*background:url('../images/WhosOnFirstComponent.svg');*/
-    margin:3.33% 3.33%;
     width:100%;
     height:100%;
 
@@ -81,26 +81,14 @@
     display: inline-block; */
 }
 
-.offLight {
-    background-color: #bbb;
-}
-
-.errorRed {
-    background-color: #e62828;
-}
-
-.successGreen {
-    background-color: #28e64f;
-}
-
-.buttonContainer {
+.whosOnFirstButtonContainer {
     display: inline-block;
     width: 80%;
     vertical-align: top;
     background-color: transparent;
 }
 
-.WordButton{
+.whosOnFirstWordButton{
     margin: 0 0% 0 10%;
     width: 35%;
     height: 12%;
@@ -109,17 +97,17 @@
     background-color: wheat;
 }
 
-.WordButton:active {
+.whosOnFirstWordButton:active {
     box-shadow: 2% 0% #666;
     transform: translateY(2%);
 }
 
-#ButtonRow {
+#whosOnFirstButtonRow {
     margin: 2%;
     
 }
 
-.ProgressLightContainer {
+.whosOnFirstProgressLightContainer {
     display: inline-block;
     width: 14%;
     height: 50%;
@@ -128,21 +116,21 @@
     
 }
 
-#Light1{
+#whosOnFirstLight1{
     margin: 5% 0 10% 5%;  
     width: 90%;
     height: 12%;
     background-color: white;
 }
 
-#Light2{
+#whosOnFirstLight2{
     margin: 5% 0 10% 5%;
     width: 90%;
     height: 12%;
     background-color: white;
 }
 
-#Light3{
+#whosOnFirstLight3{
     margin: 200% 0 10% 5%;
     width: 90%;
     height: 12%;

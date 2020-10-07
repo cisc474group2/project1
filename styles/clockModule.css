@@ -15,7 +15,7 @@
     border-color:black;
     border-width: .2vw;
     color: red;
-    font-size: 225%;
+    font-size: 1.5vw;
     text-indent: 22%;
     background-color: black;
 }
@@ -27,10 +27,8 @@
 }
 
 #clockOuterBorder{
-    margin-left:3%;
-    margin-top:1%;
-    height:90%;
-    width:95%;
+    height:100%;
+    width:100%;
     border-style:solid;
     border-color:black;
     border-width: .18vw;
@@ -46,21 +44,9 @@
     border-color:black;
     border-width: .18vw;
     text-align: center;
-    font-size: 500%;
+    font-size: 4.5vw;
     background-color: black;
     color: red;
     margin-bottom: 5%;
     padding-top: 15%;
 }
-
-/*.offLight {
-    background-color: #bbb;
-}
-
-.errorRed {
-    background-color: #e62828;
-}
-
-.successGreen {
-    background-color: #28e64f;
-}*/

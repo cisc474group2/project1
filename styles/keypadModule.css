@@ -34,7 +34,8 @@
 }
 
 #keypadlowerSegment{
-    width:100%;
+    margin: 6%;
+    width:90%;
 }
 
 .keypadindicatorLight {
@@ -62,7 +63,7 @@
 }
 
 
-.buttonContainer {
+.keyPadButtonContainer {
     padding: 7%;
     background-color: transparent;
 }

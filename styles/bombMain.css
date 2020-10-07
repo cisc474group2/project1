@@ -1,15 +1,28 @@
-.bombBackground {
+.bombBackgroundGame {
   background:url('../images/bombBackround.jpg');
-  height: 100vw;
-  width: 100vw;
   position:relative;
-  background-position: 60% 24%;
+  background-position: 60% 0%;
   background-repeat: no-repeat;
   padding: 23%;
+  padding-top: 14%;
+  padding-bottom: 32%;
+  background-size: 110%;
+}
+
+.bombBackgroundLoss {
+  background-color: black;
+  position:relative;
   background-size: 110%;
   /*background-size: 150%;*/
 }
 
+.bombBackground {
+  height: 100vw;
+  width: 100vw;
+  background-blend-mode: multiply;
+}
+
+/*
 .module-grid{
   display: grid;
   grid-template-columns: 33.33% 33.33% 33.33%;
@@ -17,6 +30,16 @@
   background-color: #2196F300;
   padding: 0%;
   height: 100%;
+  width: 100%;
+}*/
+
+.module-grid{
+  display: grid;
+  grid-template-columns: 33.33% 33.33% 33.33%;
+  grid-template-rows: 50% 50%;
+  background-color: #2196F300;
+  padding: 0%;
+  height: 66.6666666666666666667%;
   width: 100%;
 }
 
@@ -26,7 +49,7 @@
   border-style: solid;
   width: fit-content;
   height: fit-content;
-  background-color: rgba(255, 255, 255);
+  background-color: brown;
   padding: 3%;
   font-size: 2vh;
   text-align: left;
@@ -34,14 +57,24 @@
   height: 100%;
 }
 
+#retryButton{
+  width: 50%;
+  height: 30%;
+  color: red;
+  background-color: black;
+  border-color: red;
+  margin: 15% 21.01%;
+}
+
 #moduleSize {
-  width:  93.75%;
-  height: 93.75%;
+  width:  100%;
+  height: 100%;
 }
 
 .genericModule {
   width:100%;
   height:100%;
+  background-color: silver;
 }
 
 #genericBombOverlay {
@@ -107,4 +140,9 @@
 .yellow {
   color: black;
   background-color: yellow;
+}
+
+.warningRed {
+  color: #aa00009e;
+  background-color: #aa00009e;
 }
