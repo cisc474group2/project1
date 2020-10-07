@@ -21,7 +21,7 @@ $(document).ready(function(){
          */
         var bombInfo = getBombInfo(); 
 
-        var indicatorLightOn = bombInfo[0];
+        var indicatorLight = bombInfo[0];
         var indicatorLabel = bombInfo[1];
         var numBatteries = bombInfo[2].length;
 
