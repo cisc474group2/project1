@@ -87,7 +87,6 @@ btn1-6:
 function generateGameData(){
 	populateButtons();
 	generateButtonNumber();
-	console.log("Button to read: "+ GameData.ButtonToRead);
 	GameData.DisplayWord = generateDisplayWord(GameData.ButtonToRead); 
 	
 
@@ -120,7 +119,6 @@ function populateButtons(){
 	for(k = 0; k < 6; k++){
 		var index =  Math.floor(Math.random()*tempButtonWords.length);
 		GameData.buttons[k] = tempButtonWords[index];
-		console.log(tempButtonWords[index]);
 		tempButtonWords.splice(index,1);
 		
 	}
@@ -182,11 +180,13 @@ function CheckClick(){
 		if(correct == 5){
 			document.getElementById("whosOnFirstIndicatorLight").classList.remove('offLight');
 			document.getElementById("whosOnFirstIndicatorLight").classList.add('successGreen');
+			addSuccess();
 			return;	
 		}
 		generateGameData();
 	}
 	else{
+		addStrike();
 		document.getElementById("whosOnFirstIndicatorLight").classList.remove('offLight');
 		document.getElementById("whosOnFirstIndicatorLight").classList.add('errorRed');
 		setTimeout(function(){
