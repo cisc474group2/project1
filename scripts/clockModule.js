@@ -56,6 +56,7 @@ let addStrike=function(){
         //document.getElementById("upperSegment").innerHTML="X X X";
         //lose goes here
         cleanUpClock();
+        gameLoss();
     }
 };
 
@@ -67,7 +68,6 @@ let cleanUpClock = function() {
     if(simonIntervalID!=null){
         clearInterval(simonIntervalID);
     }
-    gameLoss();
 };
 
 let timingChecker=function() {

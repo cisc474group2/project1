@@ -100,6 +100,7 @@ var addSuccess = function () {
     successCount += 1;
     if (successCount == numModulesLoaded) {
         console.log("game won");
+        heartbeatSound.pause();
         clearInterval(clockIntervalID);
         setTimeout(() => {
             successSound.play();
