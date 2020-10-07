@@ -76,6 +76,7 @@ var startGame = function (ct, numModules = 2, hd) {
 
 
 function gameLoss() {
+    heartbeatSound.pause();
 
     setTimeout(() => {
         explosionSound.play();
@@ -101,7 +102,7 @@ var addSuccess = function () {
     if (successCount == numModulesLoaded) {
         console.log("game won");
         heartbeatSound.pause();
-        clearInterval(clockIntervalID);
+        cleanUpClock();
         setTimeout(() => {
             successSound.play();
         }, 500);
